@@ -1,1 +1,102 @@
 \section{Ejercicio 2: Reconocimiento de secuencia de bits}
+Se desea dise\~nar una m\'aquina de estados implementada con m\'aquina de Mealy, la cual sea capaz de analizar una secuencia de bits y detectar si se produjo un patr\'on
+seguido por 1-1-0-1, ante lo cual deber\'a notificar tal suceso activando su salida para ello. En la Fig. \ref{fig:esquema_general_dispositivo} se ilustra un esquema general de ello.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{../EJ1/Recursos/dispositivo_general.png}
+    \caption{Esquema general del dispositivo a dise\~nar}
+    \label{fig:esquema_general_dispositivo}
+\end{figure}
+
+\subsection{Dise\~no de M\'aquina de Estados}
+En primer lugar, dadas las especificaciones de la m\'aquina de estado, se desea dise\~nar tal dispositivo el cual consta de una \'unica entrada y una \'unica salida. Para lo cual se
+emplea un esquema gen\'erico de m\'aquina de estados, en donde la salida ser\'a asincr\'onica pues se busca utilizar el dise\~no de Mealy para tal l\'ogica. Este esquema general descripto
+puede visualizarse en la Fig. \ref{fig:esquema_general_mealy}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{../EJ1/Recursos/maquina_estados_mealy.png}
+    \caption{Esquema general de la m\'aquina de Mealy}
+    \label{fig:esquema_general_mealy}
+\end{figure}
+
+En la Fig. \ref{fig:diagrama_estados_ejercicio_2} se puede observar el diagrama de estados propuesto. Es importante mencionar que el estado de Reset es definido como tal
+para reconocer cu\'al es el estado inicial de la m\'aquina, y deber\'a ser tenido en cuenta durante la asignaci\'on de estados en caso de proveer la posibilidad de reiniciar la m\'aquina,
+pues los flip flops deber\'an ser llevados a dicho estado, seg\'un sea asignado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{../EJ1/Recursos/diagrama_estados.png}
+    \caption{Diagrama de estados}
+    \label{fig:diagrama_estados_ejercicio_2}
+\end{figure}
+
+En la Tabla \ref{table:tabla_estados_ejercicio_2} se puede observar la tabla de estados o transiciones de la m\'aquina de estados, habiendo ya asignado correspondientemente a cada estado una configuraci\'on de bits. Es de inter\'es mencionar
+que tal asignaci\'on es el resultado de comparar las diferentes alternativas y encontrar que, dada la distribuci\'on propuesta, la l\'ogica externa es la m\'inima necesaria.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c  c c  c c}
+        Estado & \multicolumn{2}{c}{Pr\'oximo} & \multicolumn{2}{c}{Salida} \\
+        $y_2 y_1$ & $w = 0$ & $w = 1$ & $w = 0$ & $w = 1$ \\
+        \hline \\
+        $A=11$ & $A=11$ & $B=00$ & $z=0$ & $z=0$ \\
+        $B=00$ & $A=11$ & $C=01$ & $z=0$ & $z=0$ \\
+        $C=01$ & $D=10$ & $C=01$ & $z=0$ & $z=0$ \\
+        $D=10$ & $A=11$ & $A=11$ & $z=0$ & $z=1$ \\
+        \hline
+    \end{tabular}    
+    \caption{Tabla de estados o transiciones}
+    \label{table:tabla_estados_ejercicio_2}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{Karnaughvuit}
+    \maxterms{0,1,2,3,4,5,7}
+    \minterms{6}
+    \implicantsol{6}{red}
+    \end{Karnaughvuit}
+    \caption{Karnaugh para la variable de salida}
+\end{figure}
+
+\begin{equation}
+    z = w \cdot y_2 \cdot \overline{y_1}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \begin{Karnaughvuit}
+    \maxterms{4,5,7}
+    \minterms{0,1,2,3,6}
+    \implicant{0}{2}{red}
+    \implicant{2}{6}{blue}
+    \end{Karnaughvuit}
+    \caption{Karnaugh para la variable de estado $y_2$}
+\end{figure}
+
+\begin{equation}
+    y_2 = \overline{w} + y_2 \cdot \overline{y_1}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \begin{Karnaughvuit}
+    \maxterms{1,7}
+    \minterms{0,2,3,4,5,6}
+    \implicant{4}{5}{red}
+    \implicant{3}{2}{red}
+    \implicantcostats{0}{6}{blue}
+    \end{Karnaughvuit}
+    \caption{Karnaugh para la variable de estado $y_1$}
+\end{figure}
+
+\begin{equation}
+    y_1 = \overline{y_1} + \overline{w} \cdot y_2 + w \cdot \overline{y_2}
+\end{equation}
+
+\subsection{Simulaciones en Verilog}
+\subsection{Dise\~no en PCB}
+\subsection{Resultados}
+\subsection{Conclusiones}
