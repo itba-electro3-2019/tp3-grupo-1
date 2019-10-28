@@ -4,7 +4,7 @@ seguido por 1-1-0-1, ante lo cual deber\'a notificar tal suceso activando su sal
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{../EJ1/Recursos/dispositivo_general.png}
+    \includegraphics[scale=0.7]{../EJ2/Recursos/dispositivo_general.png}
     \caption{Esquema general del dispositivo a dise\~nar}
     \label{fig:esquema_general_dispositivo}
 \end{figure}
@@ -16,7 +16,7 @@ puede visualizarse en la Fig. \ref{fig:esquema_general_mealy}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{../EJ1/Recursos/maquina_estados_mealy.png}
+    \includegraphics[scale=0.7]{../EJ2/Recursos/maquina_estados_mealy.png}
     \caption{Esquema general de la m\'aquina de Mealy}
     \label{fig:esquema_general_mealy}
 \end{figure}
@@ -27,7 +27,7 @@ pues los flip flops deber\'an ser llevados a dicho estado, seg\'un sea asignado.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{../EJ1/Recursos/diagrama_estados.png}
+    \includegraphics[scale=0.6]{../EJ2/Recursos/diagrama_estados.png}
     \caption{Diagrama de estados}
     \label{fig:diagrama_estados_ejercicio_2}
 \end{figure}
@@ -97,6 +97,39 @@ que tal asignaci\'on es el resultado de comparar las diferentes alternativas y e
 \end{equation}
 
 \subsection{Simulaciones en Verilog}
+En la Fig. \ref{fig:circuito_logico_ej2} se puede observar el circuito l\'ogico completo correspondiente a la m\'aquina de estados dise\~nada
+en el apartado anterior. Se desea comprobar su correcto funcionamiento a nivel l\'ogico mediante una simulaci\'on en Verilog, para lo cual se emplean
+dos metodolog\'ias de dise\~no.
+
+Por un lado, puede utilizarse un dise\~no en Verilog que determine si la m\'aquina est\'a bien diagramada, utilizando para ello el bloque producedural case.
+Por otro lado, para determinar si la implementaci\'on l\'ogica de la m\'aquina puede funcionar, debe emplearse un dise\~no a nivel compuertas de los m\'odulos en Verilog,
+para esto \'ultimo se divide el problema inicialmente en tres bloques, los flip flops, la l\'ogica combinacional que produce el pr\'oximo estado y la l\'ogica de salida. Finalmente,
+un cuarto bloque o m\'odulo describe la m\'aquina interconectando los m\'odulos mencionados para producir el comportamiento esperado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{../EJ2/Recursos/circuito_logico.png}
+    \caption{Circuito l\'ogico completo de la m\'aquina de estados}
+    \label{fig:circuito_logico_ej2}
+\end{figure}
+
+En la Fig. \ref{fig:ej2_simulacion} se muestra a modo de referencia la simulaci\'on realizada y visualizada con GTKWave. Para determinar los casos de pruebas de la m\'aquina,
+se parti\'o del diagrama de estados y se consideraron diferentes secuencias. En primer lugar la secuencia 0-1-0 para determinar si permanece correctamente en el primer estado,
+pasa al segundo y vuelve al detectar el error. En segundo lugar, la secuencia 1-1-1-0-0, para determinar si llega correctamente al tercer estado, permanece y luego transiciona reiniciando
+la m\'aquina pero con la salida en estado bajo. Finalmente, la secuencia correcta para analizar si la salida responde como es esperado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{../EJ2/Recursos/simulacion.png}    
+    \caption{Simulaci\'on de Verilog visualizada con GTKWave}
+    \label{fig:ej2_simulacion}
+\end{figure}
+
 \subsection{Dise\~no en PCB}
 \subsection{Resultados}
+
 \subsection{Conclusiones}
+
+%TODO Agregar comentarios de diferencia entre usar Mealy y Moore
+% en primer lugar la diferencia en donde se produce la salida,
+% la cantidad de estados, y el caracter sincronico de la misma!

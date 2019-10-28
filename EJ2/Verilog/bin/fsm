@@ -4,218 +4,218 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x119eb60 .scope module, "fsm_sequence_test" "fsm_sequence_test" 2 10;
+S_0x1689b60 .scope module, "fsm_sequence_test" "fsm_sequence_test" 2 10;
  .timescale -4 -4;
-P_0x119f838 .param/l "BIT_MASK" 2 23, C4<1000>;
-v0x11cdec0_0 .net "clock", 0 0, v0x11cde40_0; 1 drivers
-v0x11cdfd0_0 .var "reset", 0 0;
-v0x11ce050_0 .var "w", 0 0;
-v0x11ce0d0_0 .net "z", 0 0, L_0x11cf2e0; 1 drivers
-S_0x11cdaf0 .scope module, "u_clk" "clock_gen" 2 26, 3 10, S_0x119eb60;
+P_0x168a838 .param/l "BIT_MASK" 2 23, C4<1000>;
+v0x16b8ec0_0 .net "clock", 0 0, v0x16b8e40_0; 1 drivers
+v0x16b8fd0_0 .var "reset", 0 0;
+v0x16b9050_0 .var "w", 0 0;
+v0x16b90d0_0 .net "z", 0 0, L_0x16ba2e0; 1 drivers
+S_0x16b8af0 .scope module, "u_clk" "clock_gen" 2 26, 3 10, S_0x1689b60;
  .timescale -4 -4;
-P_0x11cdbe8 .param/l "PERIOD" 3 17, +C4<010>;
-v0x11cde40_0 .var "clk", 0 0;
-S_0x11cdd50 .scope begin, "INITIALIZE" "INITIALIZE" 3 19, 3 19, S_0x11cdaf0;
+P_0x16b8be8 .param/l "PERIOD" 3 17, +C4<010>;
+v0x16b8e40_0 .var "clk", 0 0;
+S_0x16b8d50 .scope begin, "INITIALIZE" "INITIALIZE" 3 19, 3 19, S_0x16b8af0;
  .timescale -4 -4;
-S_0x11cdc60 .scope begin, "CLOCK_GENERATION" "CLOCK_GENERATION" 3 23, 3 23, S_0x11cdaf0;
+S_0x16b8c60 .scope begin, "CLOCK_GENERATION" "CLOCK_GENERATION" 3 23, 3 23, S_0x16b8af0;
  .timescale -4 -4;
-S_0x119f960 .scope module, "u_fsm" "fsm_sequence" 2 27, 4 8, S_0x119eb60;
+S_0x168a960 .scope module, "u_fsm" "fsm_sequence" 2 27, 4 8, S_0x1689b60;
  .timescale -4 -4;
-v0x11cd700_0 .alias "clock", 0 0, v0x11cdec0_0;
-RS_0x7fccc14c4108 .resolv tri, L_0x11ceda0, L_0x11ceee0, C4<zz>, C4<zz>;
-v0x11cd780_0 .net8 "current_state", 1 0, RS_0x7fccc14c4108; 2 drivers
-RS_0x7fccc14c4498 .resolv tri, L_0x11ce150, L_0x11ce760, C4<zz>, C4<zz>;
-v0x11cd850_0 .net8 "next_state", 1 0, RS_0x7fccc14c4498; 2 drivers
-v0x11cd8d0_0 .net "reset", 0 0, v0x11cdfd0_0; 1 drivers
-v0x11cd9a0_0 .net "w", 0 0, v0x11ce050_0; 1 drivers
-v0x11cda70_0 .alias "z", 0 0, v0x11ce0d0_0;
-L_0x11cec70 .part RS_0x7fccc14c4498, 0, 1;
-L_0x11ceda0 .part/pv v0x11cca30_0, 0, 1, 2;
-L_0x11cee40 .part RS_0x7fccc14c4498, 1, 1;
-L_0x11ceee0 .part/pv v0x11cc6a0_0, 1, 1, 2;
-S_0x11ccbb0 .scope module, "u_next_state" "fsm_next_state" 4 28, 4 42, S_0x119f960;
+v0x16b8700_0 .alias "clock", 0 0, v0x16b8ec0_0;
+RS_0x7f6362045108 .resolv tri, L_0x16b9da0, L_0x16b9ee0, C4<zz>, C4<zz>;
+v0x16b8780_0 .net8 "current_state", 1 0, RS_0x7f6362045108; 2 drivers
+RS_0x7f6362045498 .resolv tri, L_0x16b9150, L_0x16b9760, C4<zz>, C4<zz>;
+v0x16b8850_0 .net8 "next_state", 1 0, RS_0x7f6362045498; 2 drivers
+v0x16b88d0_0 .net "reset", 0 0, v0x16b8fd0_0; 1 drivers
+v0x16b89a0_0 .net "w", 0 0, v0x16b9050_0; 1 drivers
+v0x16b8a70_0 .alias "z", 0 0, v0x16b90d0_0;
+L_0x16b9c70 .part RS_0x7f6362045498, 0, 1;
+L_0x16b9da0 .part/pv v0x16b7a30_0, 0, 1, 2;
+L_0x16b9e40 .part RS_0x7f6362045498, 1, 1;
+L_0x16b9ee0 .part/pv v0x16b76a0_0, 1, 1, 2;
+S_0x16b7bb0 .scope module, "u_next_state" "fsm_next_state" 4 28, 4 42, S_0x168a960;
  .timescale -4 -4;
-L_0x11cd340 .functor NOT 1, v0x11ce050_0, C4<0>, C4<0>, C4<0>;
-L_0x11ce4d0 .functor NOT 1, L_0x11ce370, C4<0>, C4<0>, C4<0>;
-L_0x11ce560 .functor AND 1, L_0x11ce2d0, L_0x11ce4d0, C4<1>, C4<1>;
-L_0x11ce610 .functor OR 1, L_0x11cd340, L_0x11ce560, C4<0>, C4<0>;
-L_0x11ce8a0 .functor NOT 1, L_0x11ce800, C4<0>, C4<0>, C4<0>;
-L_0x11cea30 .functor XOR 1, v0x11ce050_0, L_0x11ce950, C4<0>, C4<0>;
-L_0x11ceb20 .functor OR 1, L_0x11ce8a0, L_0x11cea30, C4<0>, C4<0>;
-v0x11ccca0_0 .net *"_s10", 0 0, L_0x11ce560; 1 drivers
-v0x11ccd20_0 .net *"_s12", 0 0, L_0x11ce610; 1 drivers
-v0x11ccdc0_0 .net *"_s17", 0 0, L_0x11ce800; 1 drivers
-v0x11cce60_0 .net *"_s18", 0 0, L_0x11ce8a0; 1 drivers
-v0x11ccf10_0 .net *"_s2", 0 0, L_0x11cd340; 1 drivers
-v0x11ccfb0_0 .net *"_s21", 0 0, L_0x11ce950; 1 drivers
-v0x11cd090_0 .net *"_s22", 0 0, L_0x11cea30; 1 drivers
-v0x11cd130_0 .net *"_s24", 0 0, L_0x11ceb20; 1 drivers
-v0x11cd220_0 .net *"_s5", 0 0, L_0x11ce2d0; 1 drivers
-v0x11cd2c0_0 .net *"_s7", 0 0, L_0x11ce370; 1 drivers
-v0x11cd3c0_0 .net *"_s8", 0 0, L_0x11ce4d0; 1 drivers
-v0x11cd460_0 .alias "current_state", 1 0, v0x11cd780_0;
-v0x11cd550_0 .alias "in", 0 0, v0x11cd9a0_0;
-v0x11cd600_0 .alias "next_state", 1 0, v0x11cd850_0;
-L_0x11ce150 .part/pv L_0x11ce610, 1, 1, 2;
-L_0x11ce2d0 .part RS_0x7fccc14c4108, 1, 1;
-L_0x11ce370 .part RS_0x7fccc14c4108, 0, 1;
-L_0x11ce760 .part/pv L_0x11ceb20, 0, 1, 2;
-L_0x11ce800 .part RS_0x7fccc14c4108, 0, 1;
-L_0x11ce950 .part RS_0x7fccc14c4108, 1, 1;
-S_0x11cc7f0 .scope module, "u_ffd_0" "flip_flop_d" 4 29, 5 7, S_0x119f960;
+L_0x16b8340 .functor NOT 1, v0x16b9050_0, C4<0>, C4<0>, C4<0>;
+L_0x16b94d0 .functor NOT 1, L_0x16b9370, C4<0>, C4<0>, C4<0>;
+L_0x16b9560 .functor AND 1, L_0x16b92d0, L_0x16b94d0, C4<1>, C4<1>;
+L_0x16b9610 .functor OR 1, L_0x16b8340, L_0x16b9560, C4<0>, C4<0>;
+L_0x16b98a0 .functor NOT 1, L_0x16b9800, C4<0>, C4<0>, C4<0>;
+L_0x16b9a30 .functor XOR 1, v0x16b9050_0, L_0x16b9950, C4<0>, C4<0>;
+L_0x16b9b20 .functor OR 1, L_0x16b98a0, L_0x16b9a30, C4<0>, C4<0>;
+v0x16b7ca0_0 .net *"_s10", 0 0, L_0x16b9560; 1 drivers
+v0x16b7d20_0 .net *"_s12", 0 0, L_0x16b9610; 1 drivers
+v0x16b7dc0_0 .net *"_s17", 0 0, L_0x16b9800; 1 drivers
+v0x16b7e60_0 .net *"_s18", 0 0, L_0x16b98a0; 1 drivers
+v0x16b7f10_0 .net *"_s2", 0 0, L_0x16b8340; 1 drivers
+v0x16b7fb0_0 .net *"_s21", 0 0, L_0x16b9950; 1 drivers
+v0x16b8090_0 .net *"_s22", 0 0, L_0x16b9a30; 1 drivers
+v0x16b8130_0 .net *"_s24", 0 0, L_0x16b9b20; 1 drivers
+v0x16b8220_0 .net *"_s5", 0 0, L_0x16b92d0; 1 drivers
+v0x16b82c0_0 .net *"_s7", 0 0, L_0x16b9370; 1 drivers
+v0x16b83c0_0 .net *"_s8", 0 0, L_0x16b94d0; 1 drivers
+v0x16b8460_0 .alias "current_state", 1 0, v0x16b8780_0;
+v0x16b8550_0 .alias "in", 0 0, v0x16b89a0_0;
+v0x16b8600_0 .alias "next_state", 1 0, v0x16b8850_0;
+L_0x16b9150 .part/pv L_0x16b9610, 1, 1, 2;
+L_0x16b92d0 .part RS_0x7f6362045108, 1, 1;
+L_0x16b9370 .part RS_0x7f6362045108, 0, 1;
+L_0x16b9760 .part/pv L_0x16b9b20, 0, 1, 2;
+L_0x16b9800 .part RS_0x7f6362045108, 0, 1;
+L_0x16b9950 .part RS_0x7f6362045108, 1, 1;
+S_0x16b77f0 .scope module, "u_ffd_0" "flip_flop_d" 4 29, 5 7, S_0x168a960;
  .timescale 0 0;
-v0x11cc8e0_0 .alias "clk", 0 0, v0x11cdec0_0;
-v0x11cc9b0_0 .net "d", 0 0, L_0x11cec70; 1 drivers
-v0x11cca30_0 .var "q", 0 0;
-v0x11ccad0_0 .alias "reset", 0 0, v0x11cd8d0_0;
-S_0x11cc410 .scope module, "u_ffd_1" "flip_flop_d" 4 30, 5 7, S_0x119f960;
+v0x16b78e0_0 .alias "clk", 0 0, v0x16b8ec0_0;
+v0x16b79b0_0 .net "d", 0 0, L_0x16b9c70; 1 drivers
+v0x16b7a30_0 .var "q", 0 0;
+v0x16b7ad0_0 .alias "reset", 0 0, v0x16b88d0_0;
+S_0x16b7410 .scope module, "u_ffd_1" "flip_flop_d" 4 30, 5 7, S_0x168a960;
  .timescale 0 0;
-v0x11cc540_0 .alias "clk", 0 0, v0x11cdec0_0;
-v0x11cc600_0 .net "d", 0 0, L_0x11cee40; 1 drivers
-v0x11cc6a0_0 .var "q", 0 0;
-v0x11cc740_0 .alias "reset", 0 0, v0x11cd8d0_0;
-E_0x11cc1c0/0 .event edge, v0x11cc740_0;
-E_0x11cc1c0/1 .event posedge, v0x11cc540_0;
-E_0x11cc1c0 .event/or E_0x11cc1c0/0, E_0x11cc1c0/1;
-S_0x119fa50 .scope module, "u_output" "fsm_output" 4 31, 4 67, S_0x119f960;
+v0x16b7540_0 .alias "clk", 0 0, v0x16b8ec0_0;
+v0x16b7600_0 .net "d", 0 0, L_0x16b9e40; 1 drivers
+v0x16b76a0_0 .var "q", 0 0;
+v0x16b7740_0 .alias "reset", 0 0, v0x16b88d0_0;
+E_0x16b71c0/0 .event edge, v0x16b7740_0;
+E_0x16b71c0/1 .event posedge, v0x16b7540_0;
+E_0x16b71c0 .event/or E_0x16b71c0/0, E_0x16b71c0/1;
+S_0x168aa50 .scope module, "u_output" "fsm_output" 4 31, 4 67, S_0x168a960;
  .timescale -4 -4;
-L_0x11ce470 .functor AND 1, v0x11ce050_0, L_0x11cf090, C4<1>, C4<1>;
-L_0x11cf200 .functor NOT 1, L_0x11cf160, C4<0>, C4<0>, C4<0>;
-L_0x11cf2e0 .functor AND 1, L_0x11ce470, L_0x11cf200, C4<1>, C4<1>;
-v0x119e740_0 .net *"_s1", 0 0, L_0x11cf090; 1 drivers
-v0x11cc000_0 .net *"_s2", 0 0, L_0x11ce470; 1 drivers
-v0x11cc0a0_0 .net *"_s5", 0 0, L_0x11cf160; 1 drivers
-v0x11cc140_0 .net *"_s6", 0 0, L_0x11cf200; 1 drivers
-v0x11cc1f0_0 .alias "in", 0 0, v0x11cd9a0_0;
-v0x11cc290_0 .alias "state", 1 0, v0x11cd780_0;
-v0x11cc370_0 .alias "z", 0 0, v0x11ce0d0_0;
-L_0x11cf090 .part RS_0x7fccc14c4108, 1, 1;
-L_0x11cf160 .part RS_0x7fccc14c4108, 0, 1;
-S_0x1189830 .scope begin, "TESTING" "TESTING" 2 30, 2 30, S_0x119eb60;
+L_0x16b9470 .functor AND 1, v0x16b9050_0, L_0x16ba090, C4<1>, C4<1>;
+L_0x16ba200 .functor NOT 1, L_0x16ba160, C4<0>, C4<0>, C4<0>;
+L_0x16ba2e0 .functor AND 1, L_0x16b9470, L_0x16ba200, C4<1>, C4<1>;
+v0x1689740_0 .net *"_s1", 0 0, L_0x16ba090; 1 drivers
+v0x16b7000_0 .net *"_s2", 0 0, L_0x16b9470; 1 drivers
+v0x16b70a0_0 .net *"_s5", 0 0, L_0x16ba160; 1 drivers
+v0x16b7140_0 .net *"_s6", 0 0, L_0x16ba200; 1 drivers
+v0x16b71f0_0 .alias "in", 0 0, v0x16b89a0_0;
+v0x16b7290_0 .alias "state", 1 0, v0x16b8780_0;
+v0x16b7370_0 .alias "z", 0 0, v0x16b90d0_0;
+L_0x16ba090 .part RS_0x7f6362045108, 1, 1;
+L_0x16ba160 .part RS_0x7f6362045108, 0, 1;
+S_0x1674830 .scope begin, "TESTING" "TESTING" 2 30, 2 30, S_0x1689b60;
  .timescale -4 -4;
-S_0x11a09e0 .scope begin, "GTKWAVE_FILE" "GTKWAVE_FILE" 2 58, 2 58, S_0x119eb60;
+S_0x168b9e0 .scope begin, "GTKWAVE_FILE" "GTKWAVE_FILE" 2 58, 2 58, S_0x1689b60;
  .timescale -4 -4;
-    .scope S_0x11cdaf0;
+    .scope S_0x16b8af0;
 T_0 ;
-    %fork t_1, S_0x11cdd50;
+    %fork t_1, S_0x16b8d50;
     %jmp t_0;
-    .scope S_0x11cdd50;
+    .scope S_0x16b8d50;
 t_1 ;
-    %set/v v0x11cde40_0, 0, 1;
+    %set/v v0x16b8e40_0, 0, 1;
     %end;
-    .scope S_0x11cdaf0;
+    .scope S_0x16b8af0;
 t_0 %join;
     %end;
     .thread T_0;
-    .scope S_0x11cdaf0;
+    .scope S_0x16b8af0;
 T_1 ;
-    %fork t_3, S_0x11cdc60;
+    %fork t_3, S_0x16b8c60;
     %jmp t_2;
-    .scope S_0x11cdc60;
+    .scope S_0x16b8c60;
 t_3 ;
     %delay 1, 0;
-    %load/v 8, v0x11cde40_0, 1;
+    %load/v 8, v0x16b8e40_0, 1;
     %inv 8, 1;
-    %set/v v0x11cde40_0, 8, 1;
+    %set/v v0x16b8e40_0, 8, 1;
     %end;
-    .scope S_0x11cdaf0;
+    .scope S_0x16b8af0;
 t_2 %join;
     %jmp T_1;
     .thread T_1;
-    .scope S_0x11cc7f0;
+    .scope S_0x16b77f0;
 T_2 ;
-    %set/v v0x11cca30_0, 0, 1;
+    %set/v v0x16b7a30_0, 0, 1;
     %end;
     .thread T_2;
-    .scope S_0x11cc7f0;
+    .scope S_0x16b77f0;
 T_3 ;
-    %wait E_0x11cc1c0;
-    %load/v 8, v0x11ccad0_0, 1;
+    %wait E_0x16b71c0;
+    %load/v 8, v0x16b7ad0_0, 1;
     %jmp/0xz  T_3.0, 8;
-    %set/v v0x11cca30_0, 0, 1;
+    %set/v v0x16b7a30_0, 0, 1;
     %jmp T_3.1;
 T_3.0 ;
-    %load/v 8, v0x11cc9b0_0, 1;
-    %set/v v0x11cca30_0, 8, 1;
+    %load/v 8, v0x16b79b0_0, 1;
+    %set/v v0x16b7a30_0, 8, 1;
 T_3.1 ;
     %jmp T_3;
     .thread T_3;
-    .scope S_0x11cc410;
+    .scope S_0x16b7410;
 T_4 ;
-    %set/v v0x11cc6a0_0, 0, 1;
+    %set/v v0x16b76a0_0, 0, 1;
     %end;
     .thread T_4;
-    .scope S_0x11cc410;
+    .scope S_0x16b7410;
 T_5 ;
-    %wait E_0x11cc1c0;
-    %load/v 8, v0x11cc740_0, 1;
+    %wait E_0x16b71c0;
+    %load/v 8, v0x16b7740_0, 1;
     %jmp/0xz  T_5.0, 8;
-    %set/v v0x11cc6a0_0, 0, 1;
+    %set/v v0x16b76a0_0, 0, 1;
     %jmp T_5.1;
 T_5.0 ;
-    %load/v 8, v0x11cc600_0, 1;
-    %set/v v0x11cc6a0_0, 8, 1;
+    %load/v 8, v0x16b7600_0, 1;
+    %set/v v0x16b76a0_0, 8, 1;
 T_5.1 ;
     %jmp T_5;
     .thread T_5;
-    .scope S_0x119eb60;
+    .scope S_0x1689b60;
 T_6 ;
-    %fork t_5, S_0x1189830;
+    %fork t_5, S_0x1674830;
     %jmp t_4;
-    .scope S_0x1189830;
+    .scope S_0x1674830;
 t_5 ;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %set/v v0x11cdfd0_0, 1, 1;
+    %set/v v0x16b8fd0_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11cdfd0_0, 0, 1;
+    %set/v v0x16b8fd0_0, 0, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %vpi_call 2 38 "$display", "Testing 0-1-0. Output: %b", v0x11ce0d0_0;
+    %vpi_call 2 38 "$display", "Testing 0-1-0. Output: %b", v0x16b90d0_0;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %vpi_call 2 45 "$display", "Testing 1-1-1-0-0. Output: %b", v0x11ce0d0_0;
+    %vpi_call 2 45 "$display", "Testing 1-1-1-0-0. Output: %b", v0x16b90d0_0;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 0, 1;
+    %set/v v0x16b9050_0, 0, 1;
     %delay 2, 0;
-    %set/v v0x11ce050_0, 1, 1;
+    %set/v v0x16b9050_0, 1, 1;
     %delay 1, 0;
-    %vpi_call 2 51 "$display", "Testing 1-1-0-1. Output: %b", v0x11ce0d0_0;
+    %vpi_call 2 51 "$display", "Testing 1-1-0-1. Output: %b", v0x16b90d0_0;
     %delay 5, 0;
     %vpi_call 2 54 "$finish";
     %end;
-    .scope S_0x119eb60;
+    .scope S_0x1689b60;
 t_4 %join;
     %end;
     .thread T_6;
-    .scope S_0x119eb60;
+    .scope S_0x1689b60;
 T_7 ;
-    %fork t_7, S_0x11a09e0;
+    %fork t_7, S_0x168b9e0;
     %jmp t_6;
-    .scope S_0x11a09e0;
+    .scope S_0x168b9e0;
 t_7 ;
     %vpi_call 2 59 "$dumpfile", "bin/output.vcd";
-    %vpi_call 2 60 "$dumpvars", 1'sb0, S_0x119eb60;
+    %vpi_call 2 60 "$dumpvars", 1'sb0, S_0x1689b60;
     %end;
-    .scope S_0x119eb60;
+    .scope S_0x1689b60;
 t_6 %join;
     %end;
     .thread T_7;
