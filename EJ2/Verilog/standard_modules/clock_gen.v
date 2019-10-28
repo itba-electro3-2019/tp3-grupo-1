@@ -4,6 +4,8 @@
 //
 // Generates a clock waveform
 //----------------------------
+`timescale 100us / 100us
+
 
 module clock_gen(
     clk

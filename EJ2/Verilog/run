@@ -1,0 +1,5 @@
+# compiling using the makefile
+make clean
+make
+make run
+make view

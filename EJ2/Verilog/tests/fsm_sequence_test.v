@@ -56,7 +56,7 @@ module fsm_sequence_test();
 
     /* ¡Creating GTKWave File! */
     initial begin: GTKWAVE_FILE
-        $dumpfile("fsm_sequence_test_gtk.vcd");
+        $dumpfile("bin/output.vcd");
         $dumpvars(0, fsm_sequence_test);
     end
 endmodule
