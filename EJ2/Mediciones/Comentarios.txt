@@ -1,0 +1,20 @@
+1) MEDICION DE LOS ESTADOS DE LA MAQUINA DE ESTADOS 
+	a. SECUENCIA 0 - 1 - 0			-> OK!
+	b. SECUENCIA 1 - 1 - 1 - 0 - 0		-> OK!
+	c. SECUENCIA 1 - 1 - 0 - 1		-> OK!
+
+Aclaraciones: 
+	Canal 1 - Amarillo - Señal de clock de 1Hz o 0,1Hz
+	Canal 2 - Verde - Pulsador con resistencia 10k de pull-down
+	Canal 3 - Azul - Salida Y2 de la Máquina de estados
+	Canal 4 - Roja/Rosa - Salida Y1 de la Máquina de estados
+
+2) MEDICION DE LA SALIDA DE LA MAQUINA DE ESTADOS
+	a. SECUENCIA 0 - 1 - 0			-> OK!
+	b. SECUENCIA 1 - 1 - 1 - 0 - 0		-> 
+	c. SECUENCIA 1 - 1 - 0 - 1		->
+
+Aclaraciones:
+	Canal 1 - Amarillo - Señal de clock de 1Hz o 0,1Hz
+	Canal 2 - Verde - Pulsador con resistencia 10k de pull-down
+	Canal 3 - Azul - Salida Z de la FSM

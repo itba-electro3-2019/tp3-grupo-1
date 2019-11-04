@@ -108,7 +108,7 @@ un cuarto bloque o m\'odulo describe la m\'aquina interconectando los m\'odulos 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{../EJ2/Recursos/circuito_logico.png}
+    \includegraphics[scale=0.5]{../EJ2/Recursos/circuito_logico.png}
     \caption{Circuito l\'ogico completo de la m\'aquina de estados}
     \label{fig:circuito_logico_ej2}
 \end{figure}
@@ -126,10 +126,61 @@ la m\'aquina pero con la salida en estado bajo. Finalmente, la secuencia correct
 \end{figure}
 
 \subsection{Dise\~no en PCB}
+La realizaci\'on del PCB para implementar el circuito l\'ogico implica la conexi\'on de las compuertas l\'ogicas siguiendo
+el esquema te\'orico, y verificando previamente que no hayan complicaciones f\'isicas en tales conexiones. Esto \'ultimo implica
+utilizar consistentemente tecnolog\'ia TTL, verificando que las corrientes de salida de las compuertas no sea superada con el consumo
+de las entradas, es decir no superar el fan-out. Adem\'as, para prevenir fallos por picos en la tensi\'on de alimentaci\'on durante transitorios de las compuertas,
+se conectaron los debidos capacitores de desacople.
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c c}
+        \includegraphics[scale=0.45]{../EJ2/Recursos/pcb_3d_bottom.PNG} & 
+        \includegraphics[scale=0.45]{../EJ2/Recursos/pcb_3d_top.PNG} \\
+        \includegraphics[scale=0.6]{../EJ2/Recursos/pcb_bottom.jpeg} & 
+        \includegraphics[scale=0.6]{../EJ2/Recursos/pcb_top.jpeg} \\
+    \end{tabular}
+    \caption{PCB dise\~nado e implementado}
+\end{figure}
+
 \subsection{Resultados}
+Para la verificaci\'on del correcto funcionamiento se propone poner bajo prueba al circuito con las mismas tres secuencias que fueron empleadas
+en el proceso de simulaci\'on. Estas secuencias son 0-1-0, 1-1-1-0-0 y 1-1-0-1, para lo cual se utiliza una se\~nal de clock de baja frecuencia y la
+entrada se controla con un pulsador externo al PCB, y se realizan estas mediciones en dos partes para poder extraer la informaci\'on de la salida y la de los estados,
+ya que s\'olo se dispone de osciloscopio de cuatro canales.
+
+En la Fig. \ref{fig:fsm_ejercicio_2_estados} se muestran las mediciones de los estados de la m\'aquina de estados, en donde las se\~nales Amarilla, Verde, Azul y Roja/Rosa,
+corresponden respectivamente a la se\~nal de clock, la entrada $w$, el bit de estado $y_2$ y el bit de estado $y_1$. Mientras que en la Fig. \ref{fig:fsm_ejercicio_2_salida} se mide
+la salida de la m\'aquina de estados, en donde la se\~nales Amarilla, Verde y Azul, corresponden respectivamente a la se\~nal de clock, la entrada $w$ y la salida $z$.
+
+De izquierda a derecha, de arriba hacia abajo se ordenan los casos de cada secuencia seg\'un fueron mencionados anteriomente.
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c c}
+        \includegraphics[scale=0.2]{../EJ2/Mediciones/Estados/cropped_scope_0.png} & 
+        \includegraphics[scale=0.2]{../EJ2/Mediciones/Estados/cropped_scope_1.png} \\ 
+    \end{tabular}
+    \includegraphics[scale=0.2]{../EJ2/Mediciones/Estados/cropped_scope_2.png}
+    \caption{Estados de la FSM}
+    \label{fig:fsm_ejercicio_2_estados}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c c}
+        \includegraphics[scale=0.2]{../EJ2/Mediciones/Salida/cropped_scope_3.png} & 
+        \includegraphics[scale=0.2]{../EJ2/Mediciones/Salida/cropped_scope_4.png} \\ 
+    \end{tabular}
+    \includegraphics[scale=0.2]{../EJ2/Mediciones/Salida/cropped_scope_5.png}
+    \caption{Salida de la FSM}
+    \label{fig:fsm_ejercicio_2_salida}
+\end{figure}
 
 \subsection{Conclusiones}
-
-%TODO Agregar comentarios de diferencia entre usar Mealy y Moore
-% en primer lugar la diferencia en donde se produce la salida,
-% la cantidad de estados, y el caracter sincronico de la misma!
+Consid\'erese la m\'aquina de estados dise\~nada en base al reconocimiento de una secuencia de 4 bits, luego
+para el caso de una m\'aquina de Moore se necesitar\'ia un estado adicional donde luego de detectar la secuencia se mantenga la salida en un estado alto. Por otro lado,
+considerando los tiempos de propagaci\'on, para el instante del flanco ascendente en el cual la secuencia correcta es identificada, la salida no necesariamente refleja tal detecci\'on
+sino hasta pasar un determinado tiempo, como consecuencia de su sincronismo.
+Estos aspectos evidencian por qu\'e una m\'aquina de Mealy puede resultar beneficiosa, dado que hace uso de menos estados, y su salida al ser asincr\'onica permite que
+para el flanco de detecci\'on de la secuencia la salida refleje haber detectado correctamente el patr\'on.
