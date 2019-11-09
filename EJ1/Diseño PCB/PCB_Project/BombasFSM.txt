@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\facun\OneDrive\Desktop\ITBA\5C Electrónica III\tp3-grupo-1\EJ1\Diseño PCB\PCB_Project\BombasFSM.PcbDoc
+Date         : 8/11/2019
+Time         : 18:15:33
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 104
+    Connections routed, 104
+    Connections remaining, 0
+count : 4
