@@ -98,13 +98,8 @@ que tal asignaci\'on es el resultado de comparar las diferentes alternativas y e
 
 \subsection{Simulaciones en Verilog}
 En la Fig. \ref{fig:circuito_logico_ej2} se puede observar el circuito l\'ogico completo correspondiente a la m\'aquina de estados dise\~nada
-en el apartado anterior. Se desea comprobar su correcto funcionamiento a nivel l\'ogico mediante una simulaci\'on en Verilog, para lo cual se emplean
-dos metodolog\'ias de dise\~no.
-
-Por un lado, puede utilizarse un dise\~no en Verilog que determine si la m\'aquina est\'a bien diagramada, utilizando para ello el bloque producedural case.
-Por otro lado, para determinar si la implementaci\'on l\'ogica de la m\'aquina puede funcionar, debe emplearse un dise\~no a nivel compuertas de los m\'odulos en Verilog,
-para esto \'ultimo se divide el problema inicialmente en tres bloques, los flip flops, la l\'ogica combinacional que produce el pr\'oximo estado y la l\'ogica de salida. Finalmente,
-un cuarto bloque o m\'odulo describe la m\'aquina interconectando los m\'odulos mencionados para producir el comportamiento esperado.
+en el apartado anterior. De la misma forma que en el ejercicio 1, la simulación se realiza de dos maneras: mediante un bloque procedural, y a través de la implementación 
+de los circuitos lógicos que describen la máquina de estados.
 
 \begin{figure}[H]
     \centering

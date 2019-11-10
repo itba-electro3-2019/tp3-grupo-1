@@ -74,6 +74,41 @@ Luego, la máquina de estados estará conformada por el circuito de la Figura \r
 
 
 \subsection{Simulaciones en Verilog}
+Se desea comprobar el funcionamiento de la máquina de estados a nivel l\'ogico mediante una simulaci\'on en Verilog, para lo cual se emplean
+dos metodolog\'ias de dise\~no.
+Por un lado, puede utilizarse un dise\~no en Verilog que determine si la m\'aquina est\'a bien diagramada, utilizando para ello el bloque procedural case.
+Por otro lado, para determinar si la implementaci\'on l\'ogica de la m\'aquina puede funcionar, debe emplearse un dise\~no a nivel compuertas de los m\'odulos en Verilog,
+para esto \'ultimo se divide el problema inicialmente en tres bloques, los flip flops, la l\'ogica combinacional que produce el pr\'oximo estado y la l\'ogica de salida.
+Finalmente, un cuarto bloque o m\'odulo describe la m\'aquina interconectando los m\'odulos mencionados para producir el comportamiento esperado.
+
+En la Figura \ref{fig:gtkwave_sim_ex5} se observa el comportamiento de la máquina de estados ante los diferentes escenarios de prueba.
+Se puede apreciar como el comportamiento de la cantidad de bombas que deben encenderse es el correcto, es decir, cuando los dos sensores mandan señal \textit{low}, ambas 
+bombas se encuentran encendidas, cuando, en cambio, lo que ingresa son dos señales \textit{high}, ambas bombas se apagan.
+Cuando el agua se encuentra entre los dos sensores, la bomba que se enciende se va alternando, y, finalmente, ante la situación no esperada, se apagan las bombas por seguridad.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{../EJ1/Recursos/gtkwave_sim.png}
+    \caption{Salida de la simulación de la máquina de estados en GTKWave.}
+    \label{fig:gtkwave_sim_ex5}
+\end{figure}
+
+La misma simulación puede realizarse observando los resultados desde linea de comandos, y la salida es la siguiente:
+\begin{lstlisting}
+    Running simulation!
+    VCD info: dumpfile bin/output.vcd opened for output.
+    Testing I=0 S=0. Output: 11. Next state is 1. Current state is 0
+    Testing I=1 S=0. Output: 10. Next state is 1. Current state is 1
+    Testing I=1 S=1. Output: 00. Next state is 0. Current state is 1
+    Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0
+    Testing I=0 S=0. Output: 11. Next state is 1. Current state is 0
+    Testing I=1 S=0. Output: 10. Next state is 1. Current state is 1
+    Testing I=0 S=0. Output: 11. Next state is 0. Current state is 1
+    Testing I=1 S=1. Output: 00. Next state is 1. Current state is 0
+    Testing I=0 S=0. Output: 11. Next state is 0. Current state is 1
+    Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0
+    Testing impossible situation. Output: 00. Next state is 0. Current state is 0
+    Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0
+\end{lstlisting}
 
 
 
