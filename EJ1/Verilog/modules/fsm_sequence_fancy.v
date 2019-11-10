@@ -6,81 +6,94 @@
 //--------------------------------------------------------------------------------
 
 module fsm_sequence(
-    clock,  // Clock input of the synchronous sequential design
-    reset,  // Active high, synchronous reset input
-    w,      // Serial sequence of input bits
-    z       // Output of the fsm
+    clock,              // Clock input of the synchronous sequential design
+    reset,              // Active high, synchronous reset input
+    level_sensors,      // Input sensors for the fsm
+    pumps               // Output controlling the pumps
 );
 
     //----------------- INPUT PORTS -----------------------------
     input wire clock;
     input wire reset;
-    input wire w;
+    input wire [1:0] level_sensors;  // First bit is I sensor, second bit is S sensor
 
     //----------------- OUTPUT PORTS ----------------------------
-    output reg z;
+    output reg [1:0] pumps;         // First bit is B1 pump, second bit is B2 pump
 
     //----------------- INTERNAL VARIABLES ----------------------
-    reg [1:0] current_state;
-    reg [1:0] next_state;
+    reg current_state;
+    reg next_state;
 
     //----------------- FSM STATES ------------------------------
-    parameter [1:0] STATE_A = 2'b11;
-    parameter [1:0] STATE_B = 2'b00;
-    parameter [1:0] STATE_C = 2'b01;
-    parameter [1:0] STATE_D = 2'b10;
+    parameter LAST_1 = 1'b0;
+    parameter LAST_2 = 1'b1;
 
     /* Initialization of the FSM */ 
     initial begin: INITIALIZATION
-        current_state = STATE_A;
-        next_state = STATE_A;
+        current_state = LAST_1;
+        next_state = LAST_1;
+        pumps = 2'00;
     end
     
     /* Combinational part of the FSM, calculates the next state and the output */
-    always @ (current_state or w) begin: COMBINATIONAL_CODE
+    always @ (current_state or I or S) begin: COMBINATIONAL_CODE
         next_state = current_state;
 
         case(current_state)
-            /* Current state is STATE_A, which is the next state?*/
-            STATE_A: begin
-                z = 0;
-                if (w == 1) begin
-                    next_state = STATE_B;
-                end else begin
-                    next_state = STATE_A;
-                end
+            /* Current state is LAST_1, which is the next state?*/
+            LAST_1: begin
+                case(level_sensors)
+                    // Water is below both sensors, then both pumps are off, and the pump that has to run by itself changes (state changes)
+                    2'b00: begin
+                        pumps = 2'b00;
+                        next_state = LAST_2;
+                    end
+                    // Water is inbetween the senors, then, since current state is LAST_1, B1 continues to be on
+                    2'b01: begin
+                        pumps = 2'b01;
+                        next_state = LAST_1;
+                    end
+                    // Water is above both sensors, then both pumps are on, and the pump that has to run by itself changes (state changes)
+                    2'b11: begin
+                        pumps = 2'11;
+                        next_state = LAST_2;
+                    end
+                    // Impossible case when the sensors indicate water is above S and below I, for safety, both pumps are shut down
+                    2'b10: begin
+                        pumps = 2'b00;
+                        next_state = LAST_1;
+                    end
             end
 
-            /* Current state is STATE_A, which is the next state?*/
-            STATE_B: begin
-                z = 0;
-                if (w == 1) begin
-                    next_state = STATE_C;
-                end else begin
-                    next_state = STATE_A;
-                end
-            end
-
-            /* Current state is STATE_A, which is the next state?*/
-            STATE_C: begin
-                z = 0;
-                if (w == 0) begin
-                    next_state = STATE_D;
-                end else begin
-                    next_state = STATE_C;
-                end
-            end
-
-            /* Current state is STATE_A, which is the next state?*/
-            STATE_D: begin
-                next_state = STATE_A;
-                z = w;
+            /* Current state is LAST_2, which is the next state?*/
+            LAST_2: begin
+                case(level_sensors)
+                    // Water is below both sensors, then both pumps are off, and the pump that has to run by itself changes (state changes)
+                    2'b00: begin
+                        pumps = 2'b00;
+                        next_state = LAST_1;
+                    end
+                    // Water is inbetween the senors, then, since current state is LAST_2, B2 continues to be on
+                    2'b01: begin
+                        pumps = 2'b10;
+                        next_state = LAST_2;
+                    end
+                    // Water is above both sensors, then both pumps are on, and the pump that has to run by itself changes (state changes)
+                    2'b11: begin
+                        pumps = 2'11;
+                        next_state = LAST_1;
+                    end
+                    // Impossible case when the sensors indicate water is above S and below I, for safety, both pumps are shut down
+                    2'b10: begin
+                        pumps = 2'b00;
+                        next_state = LAST_2;
+                    end
             end
 
             /* Error, not defined the state, go to reset */
             default: begin
-                current_state = STATE_A;
-                z = 0;
+                current_state = LAST_1;
+                pumps = 2'b00;
             end
         endcase
     end
@@ -88,7 +101,7 @@ module fsm_sequence(
     /* Sequential part of the FSM, updates the next state of the FSM */
     always @(posedge clock) begin: SEQUENTIAL_CODE
         if (reset) begin
-            current_state = STATE_A;
+            current_state = LAST_1;
         end else begin
             current_state = next_state;
         end
