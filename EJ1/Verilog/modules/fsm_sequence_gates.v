@@ -1,34 +1,39 @@
 //--------------------------------------------------------------------------------
 // Module: fsm_sequence
 //
-// Implementation for a fsm that detects a serial sequence of bits 1-1-0-1, 
-// using a behavioral pattern/style for the module's code. It is a Mealy Machine.
+// Implementation for a fsm that commands two pumps B1 and B2, given the signals 
+// of two sensors I (lower) and S (upper) that are high when water in a tank 
+// reaches their level.
+// This module uses a behavioral pattern/style for the module's code.
+// It is a Mealy Machine.
 //--------------------------------------------------------------------------------
 
 module fsm_sequence(
-    clock,  // Clock input of the synchronous sequential design
-    reset,  // Active high, synchronous reset input
-    w,      // Serial sequence of input bits
-    z       // Output of the fsm
+    clock,              // Clock input of the synchronous sequential design
+    reset,              // Active high, synchronous reset input
+    level_sensors,      // Input sensors for the fsm
+    pumps,              // Output controlling the pumps
+    next_state,         // Next state, for debugging
+    current_state      // Current state, for debugging
 );
 
     //----------------- INPUT PORTS -----------------------------
     input wire clock;
     input wire reset;
-    input wire w;
+    input wire [1:0] level_sensors;  // First bit is I sensor, second bit is S sensor
 
     //----------------- OUTPUT PORTS ----------------------------
-    output wire z;
+    output wire [1:0] pumps;         // First bit is B1 pump, second bit is B2 pump
+    output wire next_state;
+    output wire current_state;
 
     //----------------- INTERNAL VARIABLES ----------------------
-    wire [1:0] current_state;
-    wire [1:0] next_state;
 
     //----------------- MODULE INSTANCES ------------------------
-    fsm_next_state u_next_state(current_state, w, next_state);
-    flip_flop_d u_ffd_0(next_state[0], reset, clock, current_state[0]);
-    flip_flop_d u_ffd_1(next_state[1], reset, clock, current_state[1]);
-    fsm_output u_output(current_state, w, z);
+    fsm_next_state my_next_state(current_state, level_sensors, next_state);
+    flip_flop_d my_ffd(next_state, reset, clock, current_state);
+    fsm_output_B1 my_B1(current_state, level_sensors, pumps[0]);
+    fsm_output_B2 my_B2(current_state, level_sensors, pumps[1]);
 
 
 endmodule
@@ -46,38 +51,61 @@ module fsm_next_state(
 );
 
     //----------------- INPUT PORTS -----------------------
-    input wire [1:0] current_state;
-    input wire in;
+    input wire current_state;
+    input wire [1:0] in;
 
     //----------------- OUTPUT PORTS ----------------------
-    output wire [1:0] next_state;
+    output wire next_state;
 
-    /* Next state connection */
-    assign next_state[1] = ~in | current_state[1] & ~current_state[0];
-    assign next_state[0] = ~current_state[0] |   in ^ current_state[1];
+    /* Output gate connection */
+    assign next_state = (~(in[1] ^ current_state) & ~in[0]) | ((in[1] ^ current_state) & in[0]);
 
 endmodule
 
 //--------------------------------------------------
 // Module: fsm_output
 //
-// Combinational logic to set the output of the fsm
+// Combinational logic to set the output B1 of the fsm
 //---------------------------------------------------
 
-module fsm_output(
-    state,  // Current state of the fsm
+module fsm_output_B1(
+    current_state,  // Current state of the fsm
     in,     // Current input of the fsm
-    z       // Output of the fsm
+    B1      // Output of the fsm
 );
 
     //----------------- INPUT PORTS -----------------------
-    input wire [1:0] state;
-    input wire in;
+    input wire current_state;
+    input wire [1:0] in;
 
     //----------------- OUTPUT PORTS ----------------------
-    output wire z;
+    output wire B1;
 
     /* Output gate connection */
-    assign z = in & state[1] & ~state[0];
+    assign B1 = (~in[1] & ~in[0]) | (~(in[1] | current_state) & in[0]);
+
+endmodule
+
+//--------------------------------------------------
+// Module: fsm_output
+//
+// Combinational logic to set the output B2 of the fsm
+//---------------------------------------------------
+
+module fsm_output_B2(
+    current_state,  // Current state of the fsm
+    in,     // Current input of the fsm
+    B2      // Output of the fsm
+);
+
+    //----------------- INPUT PORTS -----------------------
+    input wire current_state;
+    input wire [1:0] in;
+
+    //----------------- OUTPUT PORTS ----------------------
+    output wire B2;
+
+    /* Output gate connection */
+    assign B2 = (~in[1] & ~in[0]) | ((~in[1] & current_state) & in[0]);
 
 endmodule

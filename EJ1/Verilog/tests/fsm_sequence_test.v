@@ -11,10 +11,12 @@ module fsm_sequence_test();
 
     //----------------- INTERNAL VARIABLES ---------------------
     wire clock;
-    wire z;
-
+    reg [1:0] sensors;
     reg reset;
-    reg w;
+    wire [1:0] pumps;
+
+    wire next_state;
+    wire current_state;
 
     integer count;
     integer i;
@@ -23,32 +25,56 @@ module fsm_sequence_test();
     parameter BIT_MASK = 4'b1000;
     
     //----------------- MODULE INSTANCES -----------------------
-    clock_gen #(.PERIOD(2)) u_clk(clock);
-    fsm_sequence u_fsm(clock, reset, w, z);
+    clock_gen #(.PERIOD(2)) my_clk(clock);
+    fsm_sequence my_fsm(clock, reset, sensors, pumps, next_state, current_state);
 
     /* ¡Testing code! */
     initial begin: TESTING
-        w = 0;
+        sensors = 2'b00;
         #2 reset = 1;
         #2 reset = 0;
+        #2 $display("Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
 
-        #2 w = 0;
-        #2 w = 1;
-        #2 w = 0;
-        #2 $display("Testing 0-1-0. Output: %b", z);
+        #2 sensors = 2'b01;
+        #2 
+        #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
 
-        #2 w = 1;
-        #2 w = 1;
-        #2 w = 1;
-        #2 w = 0;
-        #2 w = 0;
-        #2 $display("Testing 1-1-1-0-0. Output: %b", z);
+        #2 sensors = 2'b11;
+        #2 
+        #2 $display("Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
 
-        #2 w = 1;
-        #2 w = 1;
-        #2 w = 0;
-        #2 w = 1;
-        #1 $display("Testing 1-1-0-1. Output: %b", z);
+        #2 sensors = 2'b01;
+        #2 
+        #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b00;
+        #2 
+        #2 $display("Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b01;
+        #2 
+        #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b00;
+        #2 
+        #2 $display("Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b11;
+        #2 
+        #2 $display("Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b01;
+        #2 
+        #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b10;
+        #2 
+        #2 $display("Testing impossible situation. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
+        #2 sensors = 2'b01;
+        #2 
+        #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+
         #5
 
         $finish;
