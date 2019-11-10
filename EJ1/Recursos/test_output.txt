@@ -1,0 +1,14 @@
+Running simulation!
+VCD info: dumpfile bin/output.vcd opened for output.
+Testing I=0 S=0. Output: 11. Next state is 1. Current state is 0
+Testing I=1 S=0. Output: 10. Next state is 1. Current state is 1
+Testing I=1 S=1. Output: 00. Next state is 0. Current state is 1
+Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0
+Testing I=0 S=0. Output: 11. Next state is 1. Current state is 0
+Testing I=1 S=0. Output: 10. Next state is 1. Current state is 1
+Testing I=0 S=0. Output: 11. Next state is 0. Current state is 1
+Testing I=1 S=1. Output: 00. Next state is 1. Current state is 0
+Testing I=0 S=0. Output: 11. Next state is 0. Current state is 1
+Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0
+Testing impossible situation. Output: 00. Next state is 0. Current state is 0
+Testing I=1 S=0. Output: 01. Next state is 0. Current state is 0

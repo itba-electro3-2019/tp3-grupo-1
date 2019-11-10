@@ -63,6 +63,10 @@ module fsm_sequence_test();
         #2 
         #2 $display("Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
         
+        #2 sensors = 2'b00;
+        #2 
+        #2 $display("Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
+        
         #2 sensors = 2'b01;
         #2 
         #2 $display("Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", pumps[1], pumps[0], next_state, current_state);
