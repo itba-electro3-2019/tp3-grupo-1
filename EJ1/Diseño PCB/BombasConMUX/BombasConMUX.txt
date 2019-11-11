@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\facun\OneDrive\Desktop\ITBA\5C Electrónica III\tp3-grupo-1\EJ1\Diseño PCB\BombasConMUX\BombasConMUX.PcbDoc
+Date         : 10/11/2019
+Time         : 23:06:03
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 98.53%
+    Connections, 68
+    Connections routed, 67
+    Connections remaining, 1
+count : 4
