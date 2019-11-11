@@ -12,7 +12,7 @@ CFLAGS   =
 
 STDDIR   = standard_modules
 TSTDIR   = tests
-TGTMOD   = modules/fsm_sequence_gates.v # change with ..._fancy.v for the other style
+TGTMOD   = modules/fsm_sequence_mux.v # change with ..._fancy.v for the other style
 BINDIR   = bin
 
 STD_SOURCES  := $(wildcard $(STDDIR)/*.v)

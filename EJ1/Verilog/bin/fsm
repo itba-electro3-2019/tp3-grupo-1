@@ -6,29 +6,29 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x55675121e890 .scope module, "fsm_sequence_test" "fsm_sequence_test" 2 10;
+S_0x55c451aa0630 .scope module, "fsm_sequence_test" "fsm_sequence_test" 2 10;
  .timescale -4 -4;
-P_0x55675121ea10 .param/l "BIT_MASK" 0 2 25, C4<1000>;
-v0x556751242e60_0 .net "clock", 0 0, v0x55675120f080_0;  1 drivers
-v0x556751242f20_0 .net "current_state", 0 0, v0x556751241810_0;  1 drivers
-v0x556751242fe0_0 .net "next_state", 0 0, L_0x556751243ab0;  1 drivers
-v0x556751243080_0 .net "pumps", 1 0, L_0x556751244e10;  1 drivers
-v0x556751243120_0 .var "reset", 0 0;
-v0x556751243260_0 .var "sensors", 1 0;
-S_0x55675121f820 .scope begin, "GTKWAVE_FILE" "GTKWAVE_FILE" 2 88, 2 88 0, S_0x55675121e890;
+P_0x55c451aa07b0 .param/l "BIT_MASK" 0 2 25, C4<1000>;
+v0x55c451ac5de0_0 .net "clock", 0 0, v0x55c451a8f7a0_0;  1 drivers
+v0x55c451ac5ea0_0 .net "current_state", 0 0, v0x55c451ac3c30_0;  1 drivers
+v0x55c451ac5f60_0 .net "next_state", 0 0, L_0x55c451ac6600;  1 drivers
+v0x55c451ac6090_0 .net "pumps", 1 0, L_0x55c451ac8c40;  1 drivers
+v0x55c451ac6130_0 .var "reset", 0 0;
+v0x55c451ac6220_0 .var "sensors", 1 0;
+S_0x55c451a6be30 .scope begin, "GTKWAVE_FILE" "GTKWAVE_FILE" 2 88, 2 88 0, S_0x55c451aa0630;
  .timescale -4 -4;
-S_0x55675121f9a0 .scope begin, "TESTING" "TESTING" 2 32, 2 32 0, S_0x55675121e890;
+S_0x55c451a6c000 .scope begin, "TESTING" "TESTING" 2 32, 2 32 0, S_0x55c451aa0630;
  .timescale -4 -4;
-S_0x55675121fb20 .scope module, "my_clk" "clock_gen" 2 28, 3 10 0, S_0x55675121e890;
+S_0x55c451aa1660 .scope module, "my_clk" "clock_gen" 2 28, 3 10 0, S_0x55c451aa0630;
  .timescale -4 -4;
     .port_info 0 /OUTPUT 1 "clk"
-P_0x556751211c10 .param/l "PERIOD" 0 3 17, +C4<00000000000000000000000000000010>;
-v0x55675120f080_0 .var "clk", 0 0;
-S_0x55675121fca0 .scope begin, "CLOCK_GENERATION" "CLOCK_GENERATION" 3 23, 3 23 0, S_0x55675121fb20;
+P_0x55c451a88310 .param/l "PERIOD" 0 3 17, +C4<00000000000000000000000000000010>;
+v0x55c451a8f7a0_0 .var "clk", 0 0;
+S_0x55c451aa17e0 .scope begin, "CLOCK_GENERATION" "CLOCK_GENERATION" 3 23, 3 23 0, S_0x55c451aa1660;
  .timescale -4 -4;
-S_0x55675121fe70 .scope begin, "INITIALIZE" "INITIALIZE" 3 19, 3 19 0, S_0x55675121fb20;
+S_0x55c451aa1960 .scope begin, "INITIALIZE" "INITIALIZE" 3 19, 3 19 0, S_0x55c451aa1660;
  .timescale -4 -4;
-S_0x55675123f700 .scope module, "my_fsm" "fsm_sequence" 2 29, 4 11 0, S_0x55675121e890;
+S_0x55c451ac0980 .scope module, "my_fsm" "fsm_sequence" 2 29, 4 11 0, S_0x55c451aa0630;
  .timescale -4 -4;
     .port_info 0 /INPUT 1 "clock"
     .port_info 1 /INPUT 1 "reset"
@@ -36,269 +36,327 @@ S_0x55675123f700 .scope module, "my_fsm" "fsm_sequence" 2 29, 4 11 0, S_0x556751
     .port_info 3 /OUTPUT 2 "pumps"
     .port_info 4 /OUTPUT 1 "next_state"
     .port_info 5 /OUTPUT 1 "current_state"
-v0x556751242890_0 .net "clock", 0 0, v0x55675120f080_0;  alias, 1 drivers
-v0x556751242980_0 .net "current_state", 0 0, v0x556751241810_0;  alias, 1 drivers
-v0x556751242ad0_0 .net "level_sensors", 1 0, v0x556751243260_0;  1 drivers
-v0x556751242b70_0 .net "next_state", 0 0, L_0x556751243ab0;  alias, 1 drivers
-v0x556751242c10_0 .net "pumps", 1 0, L_0x556751244e10;  alias, 1 drivers
-v0x556751242d20_0 .net "reset", 0 0, v0x556751243120_0;  1 drivers
-L_0x556751244e10 .concat8 [ 1 1 0 0], L_0x5567512443b0, L_0x556751244d00;
-S_0x55675123f8d0 .scope module, "my_B1" "fsm_output_B1" 4 35, 4 71 0, S_0x55675123f700;
+v0x55c451ac5860_0 .net "clock", 0 0, v0x55c451a8f7a0_0;  alias, 1 drivers
+v0x55c451ac5950_0 .net "current_state", 0 0, v0x55c451ac3c30_0;  alias, 1 drivers
+v0x55c451ac5aa0_0 .net "level_sensors", 1 0, v0x55c451ac6220_0;  1 drivers
+v0x55c451ac5b40_0 .net "next_state", 0 0, L_0x55c451ac6600;  alias, 1 drivers
+v0x55c451ac5be0_0 .net "pumps", 1 0, L_0x55c451ac8c40;  alias, 1 drivers
+v0x55c451ac5ca0_0 .net "reset", 0 0, v0x55c451ac6130_0;  1 drivers
+L_0x55c451ac8c40 .concat8 [ 1 1 0 0], L_0x55c451ac7530, L_0x55c451ac8200;
+S_0x55c451ac0b50 .scope module, "my_B1" "fsm_output_B1" 4 35, 4 76 0, S_0x55c451ac0980;
  .timescale -4 -4;
     .port_info 0 /INPUT 1 "current_state"
     .port_info 1 /INPUT 2 "in"
     .port_info 2 /OUTPUT 1 "B1"
-L_0x556751243c10 .functor NOT 1, L_0x556751243b70, C4<0>, C4<0>, C4<0>;
-L_0x556751243d70 .functor NOT 1, L_0x556751243cd0, C4<0>, C4<0>, C4<0>;
-L_0x556751243e30 .functor AND 1, L_0x556751243c10, L_0x556751243d70, C4<1>, C4<1>;
-L_0x556751243fe0 .functor OR 1, L_0x556751243f40, v0x556751241810_0, C4<0>, C4<0>;
-L_0x5567512440d0 .functor NOT 1, L_0x556751243fe0, C4<0>, C4<0>, C4<0>;
-L_0x556751244260 .functor AND 1, L_0x5567512440d0, L_0x556751244190, C4<1>, C4<1>;
-L_0x5567512443b0 .functor OR 1, L_0x556751243e30, L_0x556751244260, C4<0>, C4<0>;
-v0x55675123fb10_0 .net "B1", 0 0, L_0x5567512443b0;  1 drivers
-v0x55675123fbf0_0 .net *"_s1", 0 0, L_0x556751243b70;  1 drivers
-v0x55675123fcd0_0 .net *"_s11", 0 0, L_0x556751243f40;  1 drivers
-v0x55675123fd90_0 .net *"_s12", 0 0, L_0x556751243fe0;  1 drivers
-v0x55675123fe70_0 .net *"_s14", 0 0, L_0x5567512440d0;  1 drivers
-v0x55675123ffa0_0 .net *"_s17", 0 0, L_0x556751244190;  1 drivers
-v0x556751240080_0 .net *"_s18", 0 0, L_0x556751244260;  1 drivers
-v0x556751240160_0 .net *"_s2", 0 0, L_0x556751243c10;  1 drivers
-v0x556751240240_0 .net *"_s5", 0 0, L_0x556751243cd0;  1 drivers
-v0x556751240320_0 .net *"_s6", 0 0, L_0x556751243d70;  1 drivers
-v0x556751240400_0 .net *"_s8", 0 0, L_0x556751243e30;  1 drivers
-v0x5567512404e0_0 .net "current_state", 0 0, v0x556751241810_0;  alias, 1 drivers
-v0x5567512405a0_0 .net "in", 1 0, v0x556751243260_0;  alias, 1 drivers
-L_0x556751243b70 .part v0x556751243260_0, 1, 1;
-L_0x556751243cd0 .part v0x556751243260_0, 0, 1;
-L_0x556751243f40 .part v0x556751243260_0, 1, 1;
-L_0x556751244190 .part v0x556751243260_0, 0, 1;
-S_0x556751240700 .scope module, "my_B2" "fsm_output_B2" 4 36, 4 95 0, S_0x55675123f700;
+L_0x55c451ac78a0 .functor OR 1, L_0x55c451ac7760, L_0x55c451ac7800, C4<0>, C4<0>;
+L_0x55c451ac79b0 .functor NOT 1, L_0x55c451ac78a0, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac7be0 .functor OR 1, v0x55c451ac3c30_0, L_0x55c451ac7b40, C4<0>, C4<0>;
+L_0x55c451ac7ca0 .functor NOT 1, L_0x55c451ac7be0, C4<0>, C4<0>, C4<0>;
+v0x55c451ac1780_0 .net "B1", 0 0, L_0x55c451ac7530;  1 drivers
+v0x55c451ac1820_0 .net *"_s10", 0 0, L_0x55c451ac79b0;  1 drivers
+v0x55c451ac18e0_0 .net *"_s16", 0 0, L_0x55c451ac7b40;  1 drivers
+v0x55c451ac19a0_0 .net *"_s17", 0 0, L_0x55c451ac7be0;  1 drivers
+v0x55c451ac1a80_0 .net *"_s19", 0 0, L_0x55c451ac7ca0;  1 drivers
+v0x55c451ac1bb0_0 .net *"_s5", 0 0, L_0x55c451ac7760;  1 drivers
+v0x55c451ac1c90_0 .net *"_s7", 0 0, L_0x55c451ac7800;  1 drivers
+v0x55c451ac1d70_0 .net *"_s8", 0 0, L_0x55c451ac78a0;  1 drivers
+v0x55c451ac1e50_0 .net "current_state", 0 0, v0x55c451ac3c30_0;  alias, 1 drivers
+v0x55c451ac1f10_0 .net "in", 1 0, v0x55c451ac6220_0;  alias, 1 drivers
+v0x55c451ac1ff0_0 .net "mux_inputs", 1 0, L_0x55c451ac7a70;  1 drivers
+L_0x55c451ac76c0 .part v0x55c451ac6220_0, 0, 1;
+L_0x55c451ac7760 .part v0x55c451ac6220_0, 1, 1;
+L_0x55c451ac7800 .part v0x55c451ac6220_0, 1, 1;
+L_0x55c451ac7a70 .concat8 [ 1 1 0 0], L_0x55c451ac79b0, L_0x55c451ac7ca0;
+L_0x55c451ac7b40 .part v0x55c451ac6220_0, 1, 1;
+S_0x55c451ac0d90 .scope module, "my_mux" "mux" 4 91, 5 1 0, S_0x55c451ac0b50;
+ .timescale -4 -4;
+    .port_info 0 /INPUT 2 "x"
+    .port_info 1 /INPUT 1 "sel"
+    .port_info 2 /OUTPUT 1 "y"
+L_0x55c451ac7200 .functor NOT 1, L_0x55c451ac76c0, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac7270 .functor AND 1, L_0x55c451ac7110, L_0x55c451ac7200, C4<1>, C4<1>;
+L_0x55c451ac7420 .functor AND 1, L_0x55c451ac7380, L_0x55c451ac76c0, C4<1>, C4<1>;
+L_0x55c451ac7530 .functor OR 1, L_0x55c451ac7270, L_0x55c451ac7420, C4<0>, C4<0>;
+v0x55c451ac0ff0_0 .net *"_s1", 0 0, L_0x55c451ac7110;  1 drivers
+v0x55c451ac10f0_0 .net *"_s2", 0 0, L_0x55c451ac7200;  1 drivers
+v0x55c451ac11d0_0 .net *"_s4", 0 0, L_0x55c451ac7270;  1 drivers
+v0x55c451ac1290_0 .net *"_s7", 0 0, L_0x55c451ac7380;  1 drivers
+v0x55c451ac1370_0 .net *"_s8", 0 0, L_0x55c451ac7420;  1 drivers
+v0x55c451ac14a0_0 .net "sel", 0 0, L_0x55c451ac76c0;  1 drivers
+v0x55c451ac1560_0 .net "x", 1 0, L_0x55c451ac7a70;  alias, 1 drivers
+v0x55c451ac1640_0 .net "y", 0 0, L_0x55c451ac7530;  alias, 1 drivers
+L_0x55c451ac7110 .part L_0x55c451ac7a70, 0, 1;
+L_0x55c451ac7380 .part L_0x55c451ac7a70, 1, 1;
+S_0x55c451ac2110 .scope module, "my_B2" "fsm_output_B2" 4 36, 4 105 0, S_0x55c451ac0980;
  .timescale -4 -4;
     .port_info 0 /INPUT 1 "current_state"
     .port_info 1 /INPUT 2 "in"
     .port_info 2 /OUTPUT 1 "B2"
-L_0x556751244560 .functor NOT 1, L_0x5567512444c0, C4<0>, C4<0>, C4<0>;
-L_0x5567512446c0 .functor NOT 1, L_0x556751244620, C4<0>, C4<0>, C4<0>;
-L_0x556751244780 .functor AND 1, L_0x556751244560, L_0x5567512446c0, C4<1>, C4<1>;
-L_0x556751244930 .functor NOT 1, L_0x556751244890, C4<0>, C4<0>, C4<0>;
-L_0x556751244a20 .functor AND 1, L_0x556751244930, v0x556751241810_0, C4<1>, C4<1>;
-L_0x556751244bb0 .functor AND 1, L_0x556751244a20, L_0x556751244ae0, C4<1>, C4<1>;
-L_0x556751244d00 .functor OR 1, L_0x556751244780, L_0x556751244bb0, C4<0>, C4<0>;
-v0x5567512408d0_0 .net "B2", 0 0, L_0x556751244d00;  1 drivers
-v0x5567512409b0_0 .net *"_s1", 0 0, L_0x5567512444c0;  1 drivers
-v0x556751240a90_0 .net *"_s11", 0 0, L_0x556751244890;  1 drivers
-v0x556751240b50_0 .net *"_s12", 0 0, L_0x556751244930;  1 drivers
-v0x556751240c30_0 .net *"_s14", 0 0, L_0x556751244a20;  1 drivers
-v0x556751240d60_0 .net *"_s17", 0 0, L_0x556751244ae0;  1 drivers
-v0x556751240e40_0 .net *"_s18", 0 0, L_0x556751244bb0;  1 drivers
-v0x556751240f20_0 .net *"_s2", 0 0, L_0x556751244560;  1 drivers
-v0x556751241000_0 .net *"_s5", 0 0, L_0x556751244620;  1 drivers
-v0x556751241170_0 .net *"_s6", 0 0, L_0x5567512446c0;  1 drivers
-v0x556751241250_0 .net *"_s8", 0 0, L_0x556751244780;  1 drivers
-v0x556751241330_0 .net "current_state", 0 0, v0x556751241810_0;  alias, 1 drivers
-v0x5567512413d0_0 .net "in", 1 0, v0x556751243260_0;  alias, 1 drivers
-L_0x5567512444c0 .part v0x556751243260_0, 1, 1;
-L_0x556751244620 .part v0x556751243260_0, 0, 1;
-L_0x556751244890 .part v0x556751243260_0, 1, 1;
-L_0x556751244ae0 .part v0x556751243260_0, 0, 1;
-S_0x5567512414d0 .scope module, "my_ffd" "flip_flop_d" 4 34, 5 7 0, S_0x55675123f700;
+L_0x55c451ac8540 .functor OR 1, L_0x55c451ac8400, L_0x55c451ac84a0, C4<0>, C4<0>;
+L_0x55c451ac8650 .functor NOT 1, L_0x55c451ac8540, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac8880 .functor OR 1, v0x55c451ac3c30_0, v0x55c451ac3c30_0, C4<0>, C4<0>;
+L_0x55c451ac88f0 .functor NOT 1, L_0x55c451ac8880, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac89e0 .functor OR 1, L_0x55c451ac87e0, L_0x55c451ac88f0, C4<0>, C4<0>;
+L_0x55c451ac8af0 .functor NOT 1, L_0x55c451ac89e0, C4<0>, C4<0>, C4<0>;
+v0x55c451ac2cd0_0 .net "B2", 0 0, L_0x55c451ac8200;  1 drivers
+v0x55c451ac2d70_0 .net *"_s10", 0 0, L_0x55c451ac8650;  1 drivers
+v0x55c451ac2e30_0 .net *"_s16", 0 0, L_0x55c451ac87e0;  1 drivers
+v0x55c451ac2f20_0 .net *"_s17", 0 0, L_0x55c451ac8880;  1 drivers
+v0x55c451ac3000_0 .net *"_s19", 0 0, L_0x55c451ac88f0;  1 drivers
+v0x55c451ac3130_0 .net *"_s21", 0 0, L_0x55c451ac89e0;  1 drivers
+v0x55c451ac3210_0 .net *"_s23", 0 0, L_0x55c451ac8af0;  1 drivers
+v0x55c451ac32f0_0 .net *"_s5", 0 0, L_0x55c451ac8400;  1 drivers
+v0x55c451ac33d0_0 .net *"_s7", 0 0, L_0x55c451ac84a0;  1 drivers
+v0x55c451ac3540_0 .net *"_s8", 0 0, L_0x55c451ac8540;  1 drivers
+v0x55c451ac3620_0 .net "current_state", 0 0, v0x55c451ac3c30_0;  alias, 1 drivers
+v0x55c451ac36c0_0 .net "in", 1 0, v0x55c451ac6220_0;  alias, 1 drivers
+v0x55c451ac3790_0 .net "mux_inputs", 1 0, L_0x55c451ac8710;  1 drivers
+L_0x55c451ac8360 .part v0x55c451ac6220_0, 0, 1;
+L_0x55c451ac8400 .part v0x55c451ac6220_0, 1, 1;
+L_0x55c451ac84a0 .part v0x55c451ac6220_0, 1, 1;
+L_0x55c451ac8710 .concat8 [ 1 1 0 0], L_0x55c451ac8650, L_0x55c451ac8af0;
+L_0x55c451ac87e0 .part v0x55c451ac6220_0, 1, 1;
+S_0x55c451ac22e0 .scope module, "my_mux" "mux" 4 120, 5 1 0, S_0x55c451ac2110;
+ .timescale -4 -4;
+    .port_info 0 /INPUT 2 "x"
+    .port_info 1 /INPUT 1 "sel"
+    .port_info 2 /OUTPUT 1 "y"
+L_0x55c451ac7ed0 .functor NOT 1, L_0x55c451ac8360, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac7f40 .functor AND 1, L_0x55c451ac7de0, L_0x55c451ac7ed0, C4<1>, C4<1>;
+L_0x55c451ac80f0 .functor AND 1, L_0x55c451ac8050, L_0x55c451ac8360, C4<1>, C4<1>;
+L_0x55c451ac8200 .functor OR 1, L_0x55c451ac7f40, L_0x55c451ac80f0, C4<0>, C4<0>;
+v0x55c451ac2540_0 .net *"_s1", 0 0, L_0x55c451ac7de0;  1 drivers
+v0x55c451ac2640_0 .net *"_s2", 0 0, L_0x55c451ac7ed0;  1 drivers
+v0x55c451ac2720_0 .net *"_s4", 0 0, L_0x55c451ac7f40;  1 drivers
+v0x55c451ac27e0_0 .net *"_s7", 0 0, L_0x55c451ac8050;  1 drivers
+v0x55c451ac28c0_0 .net *"_s8", 0 0, L_0x55c451ac80f0;  1 drivers
+v0x55c451ac29f0_0 .net "sel", 0 0, L_0x55c451ac8360;  1 drivers
+v0x55c451ac2ab0_0 .net "x", 1 0, L_0x55c451ac8710;  alias, 1 drivers
+v0x55c451ac2b90_0 .net "y", 0 0, L_0x55c451ac8200;  alias, 1 drivers
+L_0x55c451ac7de0 .part L_0x55c451ac8710, 0, 1;
+L_0x55c451ac8050 .part L_0x55c451ac8710, 1, 1;
+S_0x55c451ac38c0 .scope module, "my_ffd" "flip_flop_d" 4 34, 6 7 0, S_0x55c451ac0980;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "d"
     .port_info 1 /INPUT 1 "reset"
     .port_info 2 /INPUT 1 "clk"
     .port_info 3 /OUTPUT 1 "q"
-v0x5567512416a0_0 .net "clk", 0 0, v0x55675120f080_0;  alias, 1 drivers
-v0x556751241770_0 .net "d", 0 0, L_0x556751243ab0;  alias, 1 drivers
-v0x556751241810_0 .var "q", 0 0;
-v0x556751241930_0 .net "reset", 0 0, v0x556751243120_0;  alias, 1 drivers
-E_0x5567511bbd60/0 .event edge, v0x556751241930_0;
-E_0x5567511bbd60/1 .event posedge, v0x55675120f080_0;
-E_0x5567511bbd60 .event/or E_0x5567511bbd60/0, E_0x5567511bbd60/1;
-S_0x556751241a50 .scope module, "my_next_state" "fsm_next_state" 4 33, 4 47 0, S_0x55675123f700;
+v0x55c451ac3ac0_0 .net "clk", 0 0, v0x55c451a8f7a0_0;  alias, 1 drivers
+v0x55c451ac3b90_0 .net "d", 0 0, L_0x55c451ac6600;  alias, 1 drivers
+v0x55c451ac3c30_0 .var "q", 0 0;
+v0x55c451ac3d50_0 .net "reset", 0 0, v0x55c451ac6130_0;  alias, 1 drivers
+E_0x55c451a34d60/0 .event edge, v0x55c451ac3d50_0;
+E_0x55c451a34d60/1 .event posedge, v0x55c451a8f7a0_0;
+E_0x55c451a34d60 .event/or E_0x55c451a34d60/0, E_0x55c451a34d60/1;
+S_0x55c451ac3e70 .scope module, "my_next_state" "fsm_next_state" 4 33, 4 47 0, S_0x55c451ac0980;
  .timescale -4 -4;
     .port_info 0 /INPUT 1 "current_state"
     .port_info 1 /INPUT 2 "in"
     .port_info 2 /OUTPUT 1 "next_state"
-L_0x5567511f21e0 .functor XOR 1, L_0x556751243390, v0x556751241810_0, C4<0>, C4<0>;
-L_0x556751212950 .functor NOT 1, L_0x5567511f21e0, C4<0>, C4<0>, C4<0>;
-L_0x5567512129c0 .functor NOT 1, L_0x5567512434a0, C4<0>, C4<0>, C4<0>;
-L_0x5567512435c0 .functor AND 1, L_0x556751212950, L_0x5567512129c0, C4<1>, C4<1>;
-L_0x5567512437a0 .functor XOR 1, L_0x556751243700, v0x556751241810_0, C4<0>, C4<0>;
-L_0x556751243930 .functor AND 1, L_0x5567512437a0, L_0x556751243860, C4<1>, C4<1>;
-L_0x556751243ab0 .functor OR 1, L_0x5567512435c0, L_0x556751243930, C4<0>, C4<0>;
-v0x556751241c90_0 .net *"_s1", 0 0, L_0x556751243390;  1 drivers
-v0x556751241d90_0 .net *"_s10", 0 0, L_0x5567512435c0;  1 drivers
-v0x556751241e70_0 .net *"_s13", 0 0, L_0x556751243700;  1 drivers
-v0x556751241f30_0 .net *"_s14", 0 0, L_0x5567512437a0;  1 drivers
-v0x556751242010_0 .net *"_s17", 0 0, L_0x556751243860;  1 drivers
-v0x556751242140_0 .net *"_s18", 0 0, L_0x556751243930;  1 drivers
-v0x556751242220_0 .net *"_s2", 0 0, L_0x5567511f21e0;  1 drivers
-v0x556751242300_0 .net *"_s4", 0 0, L_0x556751212950;  1 drivers
-v0x5567512423e0_0 .net *"_s7", 0 0, L_0x5567512434a0;  1 drivers
-v0x556751242550_0 .net *"_s8", 0 0, L_0x5567512129c0;  1 drivers
-v0x556751242630_0 .net "current_state", 0 0, v0x556751241810_0;  alias, 1 drivers
-v0x5567512426d0_0 .net "in", 1 0, v0x556751243260_0;  alias, 1 drivers
-v0x556751242790_0 .net "next_state", 0 0, L_0x556751243ab0;  alias, 1 drivers
-L_0x556751243390 .part v0x556751243260_0, 1, 1;
-L_0x5567512434a0 .part v0x556751243260_0, 0, 1;
-L_0x556751243700 .part v0x556751243260_0, 1, 1;
-L_0x556751243860 .part v0x556751243260_0, 0, 1;
-    .scope S_0x55675121fb20;
+L_0x55c451ac6ae0 .functor XOR 2, L_0x55c451ac6880, L_0x55c451ac69c0, C4<00>, C4<00>;
+L_0x7fcc06c290a8 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+L_0x55c451ac6bf0 .functor XOR 2, L_0x55c451ac6ae0, L_0x7fcc06c290a8, C4<00>, C4<00>;
+L_0x55c451ac7000 .functor XOR 1, L_0x55c451ac6f60, v0x55c451ac3c30_0, C4<0>, C4<0>;
+v0x55c451ac4a60_0 .net *"_s10", 1 0, L_0x55c451ac69c0;  1 drivers
+L_0x7fcc06c29060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55c451ac4b40_0 .net *"_s13", 0 0, L_0x7fcc06c29060;  1 drivers
+v0x55c451ac4c20_0 .net *"_s14", 1 0, L_0x55c451ac6ae0;  1 drivers
+v0x55c451ac4d10_0 .net/2u *"_s16", 1 0, L_0x7fcc06c290a8;  1 drivers
+v0x55c451ac4df0_0 .net *"_s18", 1 0, L_0x55c451ac6bf0;  1 drivers
+v0x55c451ac4f20_0 .net *"_s21", 0 0, L_0x55c451ac6d00;  1 drivers
+v0x55c451ac5000_0 .net *"_s26", 0 0, L_0x55c451ac6f60;  1 drivers
+v0x55c451ac50e0_0 .net *"_s27", 0 0, L_0x55c451ac7000;  1 drivers
+v0x55c451ac51c0_0 .net *"_s5", 0 0, L_0x55c451ac67e0;  1 drivers
+v0x55c451ac5330_0 .net *"_s6", 1 0, L_0x55c451ac6880;  1 drivers
+L_0x7fcc06c29018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55c451ac5410_0 .net *"_s9", 0 0, L_0x7fcc06c29018;  1 drivers
+v0x55c451ac54f0_0 .net "current_state", 0 0, v0x55c451ac3c30_0;  alias, 1 drivers
+v0x55c451ac5590_0 .net "in", 1 0, v0x55c451ac6220_0;  alias, 1 drivers
+v0x55c451ac5650_0 .net "mux_inputs", 1 0, L_0x55c451ac6df0;  1 drivers
+v0x55c451ac5710_0 .net "next_state", 0 0, L_0x55c451ac6600;  alias, 1 drivers
+L_0x55c451ac6740 .part v0x55c451ac6220_0, 0, 1;
+L_0x55c451ac67e0 .part v0x55c451ac6220_0, 1, 1;
+L_0x55c451ac6880 .concat [ 1 1 0 0], L_0x55c451ac67e0, L_0x7fcc06c29018;
+L_0x55c451ac69c0 .concat [ 1 1 0 0], v0x55c451ac3c30_0, L_0x7fcc06c29060;
+L_0x55c451ac6d00 .part L_0x55c451ac6bf0, 0, 1;
+L_0x55c451ac6df0 .concat8 [ 1 1 0 0], L_0x55c451ac6d00, L_0x55c451ac7000;
+L_0x55c451ac6f60 .part v0x55c451ac6220_0, 1, 1;
+S_0x55c451ac40b0 .scope module, "my_mux" "mux" 4 62, 5 1 0, S_0x55c451ac3e70;
+ .timescale -4 -4;
+    .port_info 0 /INPUT 2 "x"
+    .port_info 1 /INPUT 1 "sel"
+    .port_info 2 /OUTPUT 1 "y"
+L_0x55c451a6b1e0 .functor NOT 1, L_0x55c451ac6740, C4<0>, C4<0>, C4<0>;
+L_0x55c451a94790 .functor AND 1, L_0x55c451ac6350, L_0x55c451a6b1e0, C4<1>, C4<1>;
+L_0x55c451a94800 .functor AND 1, L_0x55c451ac64c0, L_0x55c451ac6740, C4<1>, C4<1>;
+L_0x55c451ac6600 .functor OR 1, L_0x55c451a94790, L_0x55c451a94800, C4<0>, C4<0>;
+v0x55c451ac4310_0 .net *"_s1", 0 0, L_0x55c451ac6350;  1 drivers
+v0x55c451ac4410_0 .net *"_s2", 0 0, L_0x55c451a6b1e0;  1 drivers
+v0x55c451ac44f0_0 .net *"_s4", 0 0, L_0x55c451a94790;  1 drivers
+v0x55c451ac45b0_0 .net *"_s7", 0 0, L_0x55c451ac64c0;  1 drivers
+v0x55c451ac4690_0 .net *"_s8", 0 0, L_0x55c451a94800;  1 drivers
+v0x55c451ac47c0_0 .net "sel", 0 0, L_0x55c451ac6740;  1 drivers
+v0x55c451ac4880_0 .net "x", 1 0, L_0x55c451ac6df0;  alias, 1 drivers
+v0x55c451ac4960_0 .net "y", 0 0, L_0x55c451ac6600;  alias, 1 drivers
+L_0x55c451ac6350 .part L_0x55c451ac6df0, 0, 1;
+L_0x55c451ac64c0 .part L_0x55c451ac6df0, 1, 1;
+    .scope S_0x55c451aa1660;
 T_0 ;
-    %fork t_1, S_0x55675121fe70;
+    %fork t_1, S_0x55c451aa1960;
     %jmp t_0;
-    .scope S_0x55675121fe70;
+    .scope S_0x55c451aa1960;
 t_1 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55675120f080_0, 0, 1;
+    %store/vec4 v0x55c451a8f7a0_0, 0, 1;
     %end;
-    .scope S_0x55675121fb20;
+    .scope S_0x55c451aa1660;
 t_0 %join;
     %end;
     .thread T_0;
-    .scope S_0x55675121fb20;
+    .scope S_0x55c451aa1660;
 T_1 ;
-    %fork t_3, S_0x55675121fca0;
+    %fork t_3, S_0x55c451aa17e0;
     %jmp t_2;
-    .scope S_0x55675121fca0;
+    .scope S_0x55c451aa17e0;
 t_3 ;
     %delay 1, 0;
-    %load/vec4 v0x55675120f080_0;
+    %load/vec4 v0x55c451a8f7a0_0;
     %inv;
-    %store/vec4 v0x55675120f080_0, 0, 1;
+    %store/vec4 v0x55c451a8f7a0_0, 0, 1;
     %end;
-    .scope S_0x55675121fb20;
+    .scope S_0x55c451aa1660;
 t_2 %join;
     %jmp T_1;
     .thread T_1;
-    .scope S_0x5567512414d0;
+    .scope S_0x55c451ac38c0;
 T_2 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x556751241810_0, 0, 1;
+    %store/vec4 v0x55c451ac3c30_0, 0, 1;
     %end;
     .thread T_2;
-    .scope S_0x5567512414d0;
+    .scope S_0x55c451ac38c0;
 T_3 ;
-    %wait E_0x5567511bbd60;
-    %load/vec4 v0x556751241930_0;
+    %wait E_0x55c451a34d60;
+    %load/vec4 v0x55c451ac3d50_0;
     %flag_set/vec4 8;
     %jmp/0xz  T_3.0, 8;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x556751241810_0, 0, 1;
+    %store/vec4 v0x55c451ac3c30_0, 0, 1;
     %jmp T_3.1;
 T_3.0 ;
-    %load/vec4 v0x556751241770_0;
-    %store/vec4 v0x556751241810_0, 0, 1;
+    %load/vec4 v0x55c451ac3b90_0;
+    %store/vec4 v0x55c451ac3c30_0, 0, 1;
 T_3.1 ;
     %jmp T_3;
     .thread T_3;
-    .scope S_0x55675121e890;
+    .scope S_0x55c451aa0630;
 T_4 ;
-    %fork t_5, S_0x55675121f9a0;
+    %fork t_5, S_0x55c451a6c000;
     %jmp t_4;
-    .scope S_0x55675121f9a0;
+    .scope S_0x55c451a6c000;
 t_5 ;
     %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x556751243120_0, 0, 1;
+    %store/vec4 v0x55c451ac6130_0, 0, 1;
     %delay 2, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x556751243120_0, 0, 1;
+    %store/vec4 v0x55c451ac6130_0, 0, 1;
     %delay 2, 0;
-    %vpi_call 2 36 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 36 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 40 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 40 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 3, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 44 "$display", "Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
-    %delay 2, 0;
-    %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
-    %delay 2, 0;
-    %delay 2, 0;
-    %vpi_call 2 48 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
-    %delay 2, 0;
-    %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
-    %delay 2, 0;
-    %delay 2, 0;
-    %vpi_call 2 52 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 44 "$display", "Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 56 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 48 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 60 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 52 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
+    %delay 2, 0;
+    %delay 2, 0;
+    %vpi_call 2 56 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
+    %delay 2, 0;
+    %delay 2, 0;
+    %vpi_call 2 60 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 3, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 64 "$display", "Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 64 "$display", "Testing I=1 S=1. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 68 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 68 "$display", "Testing I=0 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 72 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 72 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 2, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 76 "$display", "Testing impossible situation. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 76 "$display", "Testing impossible situation. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x556751243260_0, 0, 2;
+    %store/vec4 v0x55c451ac6220_0, 0, 2;
     %delay 2, 0;
     %delay 2, 0;
-    %vpi_call 2 80 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x556751243080_0, 1, 1>, &PV<v0x556751243080_0, 0, 1>, v0x556751242fe0_0, v0x556751242f20_0 {0 0 0};
+    %vpi_call 2 80 "$display", "Testing I=1 S=0. Output: %b%b. Next state is %b. Current state is %b", &PV<v0x55c451ac6090_0, 1, 1>, &PV<v0x55c451ac6090_0, 0, 1>, v0x55c451ac5f60_0, v0x55c451ac5ea0_0 {0 0 0};
     %delay 5, 0;
     %vpi_call 2 84 "$finish" {0 0 0};
     %end;
-    .scope S_0x55675121e890;
+    .scope S_0x55c451aa0630;
 t_4 %join;
     %end;
     .thread T_4;
-    .scope S_0x55675121e890;
+    .scope S_0x55c451aa0630;
 T_5 ;
-    %fork t_7, S_0x55675121f820;
+    %fork t_7, S_0x55c451a6be30;
     %jmp t_6;
-    .scope S_0x55675121f820;
+    .scope S_0x55c451a6be30;
 t_7 ;
     %vpi_call 2 89 "$dumpfile", "bin/output.vcd" {0 0 0};
-    %vpi_call 2 90 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55675121e890 {0 0 0};
+    %vpi_call 2 90 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55c451aa0630 {0 0 0};
     %end;
-    .scope S_0x55675121e890;
+    .scope S_0x55c451aa0630;
 t_6 %join;
     %end;
     .thread T_5;
 # The file index is used to find the file name in the following table.
-:file_names 6;
+:file_names 7;
     "N/A";
     "<interactive>";
     "tests/fsm_sequence_test.v";
     "standard_modules/clock_gen.v";
-    "modules/fsm_sequence_gates.v";
+    "modules/fsm_sequence_mux.v";
+    "standard_modules/mux.v";
     "standard_modules/flip_flop_d.v";
