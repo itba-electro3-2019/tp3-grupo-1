@@ -113,11 +113,57 @@ La misma simulación puede realizarse observando los resultados desde linea de c
 
 
 \subsection{Diseño en PCB}
+Se procedió a realizar la implementación de la máquina de estados en un PCB, para el cual algunas modificaciones que favorecían  el rendimiento de espacios y componentes 
+fueron realizadas.
+Un ejemplo de estos cambios fue reemplazar las salidas de dos ANDS a una OR por MUXES, con la entrada I como selectora y las restantes entradas de las ANDS como entradas 
+de los MUX.
+
+El resultado fue el PCB de la Figura \ref{fig:pcb_3d_view_ex1}.
+\begin{figure}[H]
+    \centering
+    \begin{tabular} {c c}
+        \includegraphics[width=0.2\textwidth]{../EJ1/Recursos/pcb_front.png}
+        \includegraphics[width=0.2\textwidth]{../EJ1/Recursos/pcb_back.png}
+    \end{tabular}
+    \caption{Implementación en PCB de la máquina de estados.}
+    \label{fig:pcb_3d_view_ex1}
+\end{figure}
 
 
 
 \subsection{Resultados}
+El circuito lógico que implementa la máquina de estados fue sometido a diferentes estímulos que simulaban, mediante pulsadores, el accionar de los sensores del tanque.
+Se midieron las salidas que comandarían las bombas y se comprobó que su comportamiento fuese el esperado.
+
+Los resultados son los que se muestran en la Figura \ref{fig:fsm_testing}, en la cual la imagen mde la izquierda es la salida inalterada, mientras que a la derecha se 
+remarcan sobre los mismos datos obtenidos del osciloscopio, las diferentes transiciones en la salida.
+El canal 1 en ambas imágenes es la señal de CLOCK (amarillo), mientras que el canal 2 (verde) y 3 (violeta) son la salida de la bomba 1 y 2, respectivamente.
+\begin{figure}[H]
+    \centering
+    \begin{tabular} {c c}
+        \includegraphics[width=0.5\textwidth]{../EJ1/Recursos/fsm_testing.png}
+        \includegraphics[width=0.5\textwidth]{../EJ1/Recursos/fsm_testing_sketched.png}
+    \end{tabular}
+    \caption{Señales de salida del circuito antes diferentes combinaciones de entradas.}
+    \label{fig:fsm_testing}
+\end{figure}
+Los colores que resaltan las transiciones indican lo siguiente:
+\begin{itemize}
+    \item Amarillo: S=1 e I=1 $\rightarrow$ S=0 e I=1.
+    \item Celeste: S=0 e I=1 $\rightarrow$ S=0 e I=0.
+    \item Rojo: S=0 e I=0 $\rightarrow$ S=1 e I=0 (caso imposible).
+    \item Verde: S=1 e I=0 $\rightarrow$ S=0 e I=0.
+    \item Naranja: S=0 e I=0 $\rightarrow$ S=0 e I=1.
+    \item Violeta: S=0 e I=1 $\rightarrow$ S=1 e I=1.
+\end{itemize}
+Puede apreciarse en esta secuencia el cambio de bomba que alternativamente le toca funcionar por sí sola.
 
 
 
 \subsection{Conclusiones}
+A modo de cierre de esta sección, puede afirmarse el correcto funcionamiento del sistema procedural mediante el cual, dado un problema que tomaba distintas acciones antes 
+distintos "momentos" en su funcionamiento, se lo puede resolver mediante el planteo de una máquina de estados teórica y su posterior implementación mediante Flip-Flops y 
+compuertas lógicas.
+
+Ha de destacarse nuevamente la ventaja en rendimiento de Flip-Flops que supuso la resolución del problema mediante una máquina de Mealy por sobre una de Moore, adjudicando 
+esta diferencia entre máquinas de estados a la alta dependencia de las salidas con las entradas.
