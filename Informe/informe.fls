@@ -39,6 +39,8 @@ INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\captio
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.sty
+INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
@@ -236,6 +238,12 @@ INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\namer
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
 OUTPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.out
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmcsc10.tfm
@@ -261,18 +269,20 @@ INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfont
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Carlos\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.toc
+INPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.toc
+INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 OUTPUT c:\Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.toc
 INPUT ej1.tex
 INPUT ej1.tex
 INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 INPUT ..\EJ1\Recursos\fsm_state_chart.jpg
 INPUT ..\EJ1\Recursos\fsm_state_chart.jpg
 INPUT ..\EJ1\Recursos\fsm_state_chart.jpg
 INPUT ..\EJ1\Recursos\fsm_state_chart.jpg
 INPUT ..\EJ1\Recursos\fsm_state_chart.jpg
-INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Carlos\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT ..\EJ1\Recursos\Y_logic_circuit.jpg
 INPUT ..\EJ1\Recursos\Y_logic_circuit.jpg
 INPUT ..\EJ1\Recursos\Y_logic_circuit.jpg
