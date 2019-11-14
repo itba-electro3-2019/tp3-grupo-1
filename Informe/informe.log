@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.21)  13 NOV 2019 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.21)  13 NOV 2019 23:11
 entering extended mode
 **"c:/Users/Carlos/Desktop/ITBA/3er año/1er cuatri/E3/TP3/tp3-grupo-1/Informe/informe.tex"
 ("c:/Users/Carlos/Desktop/ITBA/3er año/1er cuatri/E3/TP3/tp3-grupo-1/Informe/informe.tex"
@@ -549,9 +549,6 @@ LaTeX Info: Redefining \% on input line 23.
 
 LaTeX Warning: Label `fig:LEVEL_SHIFTER' multiply defined.
 
-
-LaTeX Warning: Label `fig:LEVEL_SHIFTER' multiply defined.
-
 )
 \openout1 = `informe.aux'.
 
@@ -661,81 +658,81 @@ LaTeX Info: Redefining \% on input line 1.
 
 LaTeX Warning: Reference `fig:esquema_general_dispositivo' on page 4 undefined on input line 3.
 
-<../EJ2/Recursos/maquina_estados_mealy.png, id=117, 555.07375pt x 149.55875pt>
+<../EJ2/Recursos/maquina_estados_mealy.png, id=112, 555.07375pt x 149.55875pt>
 File: ../EJ2/Recursos/maquina_estados_mealy.png Graphic file (type png)
 <use ../EJ2/Recursos/maquina_estados_mealy.png>
 Package pdftex.def Info: ../EJ2/Recursos/maquina_estados_mealy.png  used on input line 14.
 (pdftex.def)             Requested size: 388.54897pt x 104.6904pt.
-<../EJ2/Recursos/diagrama_estados.png, id=120, 674.52pt x 280.04625pt>
+<../EJ2/Recursos/diagrama_estados.png, id=115, 674.52pt x 280.04625pt>
 File: ../EJ2/Recursos/diagrama_estados.png Graphic file (type png)
 <use ../EJ2/Recursos/diagrama_estados.png>
 Package pdftex.def Info: ../EJ2/Recursos/diagrama_estados.png  used on input line 25.
 (pdftex.def)             Requested size: 404.71512pt x 168.02904pt.
 [4 <../EJ2/Recursos/maquina_estados_mealy.png> <../EJ2/Recursos/diagrama_estados.png>] [5]
-<../EJ2/Recursos/circuito_logico.png, id=144, 758.835pt x 529.98pt>
+<../EJ2/Recursos/circuito_logico.png, id=139, 758.835pt x 529.98pt>
 File: ../EJ2/Recursos/circuito_logico.png Graphic file (type png)
 <use ../EJ2/Recursos/circuito_logico.png>
 Package pdftex.def Info: ../EJ2/Recursos/circuito_logico.png  used on input line 106.
 (pdftex.def)             Requested size: 379.41658pt x 264.98933pt.
-<../EJ2/Recursos/simulacion.png, id=146, 1135.24126pt x 76.285pt>
+<../EJ2/Recursos/simulacion.png, id=141, 1135.24126pt x 76.285pt>
 File: ../EJ2/Recursos/simulacion.png Graphic file (type png)
 <use ../EJ2/Recursos/simulacion.png>
 Package pdftex.def Info: ../EJ2/Recursos/simulacion.png  used on input line 118.
 (pdftex.def)             Requested size: 454.08846pt x 30.51344pt.
  [6 <../EJ2/Recursos/circuito_logico.png> <../EJ2/Recursos/simulacion.png>]
-<../EJ2/Recursos/pcb_3d_bottom.PNG, id=155, 420.82219pt x 343.2825pt>
+<../EJ2/Recursos/pcb_3d_bottom.PNG, id=150, 420.82219pt x 343.2825pt>
 File: ../EJ2/Recursos/pcb_3d_bottom.PNG Graphic file (type png)
 <use ../EJ2/Recursos/pcb_3d_bottom.PNG>
 Package pdftex.def Info: ../EJ2/Recursos/pcb_3d_bottom.PNG  used on input line 133.
 (pdftex.def)             Requested size: 189.36823pt x 154.4757pt.
-<../EJ2/Recursos/pcb_3d_top.PNG, id=156, 419.31656pt x 344.78813pt>
+<../EJ2/Recursos/pcb_3d_top.PNG, id=151, 419.31656pt x 344.78813pt>
 File: ../EJ2/Recursos/pcb_3d_top.PNG Graphic file (type png)
 <use ../EJ2/Recursos/pcb_3d_top.PNG>
 Package pdftex.def Info: ../EJ2/Recursos/pcb_3d_top.PNG  used on input line 134.
 (pdftex.def)             Requested size: 188.6907pt x 155.15321pt.
-<../EJ2/Recursos/pcb_bottom.jpeg, id=157, 278.54062pt x 340.27126pt>
+<../EJ2/Recursos/pcb_bottom.jpeg, id=152, 278.54062pt x 340.27126pt>
 File: ../EJ2/Recursos/pcb_bottom.jpeg Graphic file (type jpg)
 <use ../EJ2/Recursos/pcb_bottom.jpeg>
 Package pdftex.def Info: ../EJ2/Recursos/pcb_bottom.jpeg  used on input line 135.
 (pdftex.def)             Requested size: 167.12566pt x 204.16432pt.
-<../EJ2/Recursos/pcb_top.jpeg, id=158, 261.22594pt x 323.70938pt>
+<../EJ2/Recursos/pcb_top.jpeg, id=153, 261.22594pt x 323.70938pt>
 File: ../EJ2/Recursos/pcb_top.jpeg Graphic file (type jpg)
 <use ../EJ2/Recursos/pcb_top.jpeg>
 Package pdftex.def Info: ../EJ2/Recursos/pcb_top.jpeg  used on input line 136.
 (pdftex.def)             Requested size: 156.73676pt x 194.22713pt.
-<../EJ2/Mediciones/Estados/cropped_scope_0.png, id=161, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Estados/cropped_scope_0.png, id=156, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Estados/cropped_scope_0.png Graphic file (type png)
 <use ../EJ2/Mediciones/Estados/cropped_scope_0.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Estados/cropped_scope_0.png  used on input line 156.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
-<../EJ2/Mediciones/Estados/cropped_scope_1.png, id=162, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Estados/cropped_scope_1.png, id=157, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Estados/cropped_scope_1.png Graphic file (type png)
 <use ../EJ2/Mediciones/Estados/cropped_scope_1.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Estados/cropped_scope_1.png  used on input line 157.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
-<../EJ2/Mediciones/Estados/cropped_scope_2.png, id=163, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Estados/cropped_scope_2.png, id=158, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Estados/cropped_scope_2.png Graphic file (type png)
 <use ../EJ2/Mediciones/Estados/cropped_scope_2.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Estados/cropped_scope_2.png  used on input line 159.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
  [7 <../EJ2/Recursos/pcb_3d_bottom.PNG> <../EJ2/Recursos/pcb_3d_top.PNG> <../EJ2/Recursos/pcb_bottom.jpeg> <../EJ2/Recursos/pcb_top.jpeg>]
-<../EJ2/Mediciones/Salida/cropped_scope_3.png, id=174, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Salida/cropped_scope_3.png, id=169, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Salida/cropped_scope_3.png Graphic file (type png)
 <use ../EJ2/Mediciones/Salida/cropped_scope_3.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Salida/cropped_scope_3.png  used on input line 167.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
-<../EJ2/Mediciones/Salida/cropped_scope_4.png, id=175, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Salida/cropped_scope_4.png, id=170, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Salida/cropped_scope_4.png Graphic file (type png)
 <use ../EJ2/Mediciones/Salida/cropped_scope_4.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Salida/cropped_scope_4.png  used on input line 168.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
-<../EJ2/Mediciones/Salida/cropped_scope_5.png, id=176, 1027.84pt x 705.63625pt>
+<../EJ2/Mediciones/Salida/cropped_scope_5.png, id=171, 1027.84pt x 705.63625pt>
 File: ../EJ2/Mediciones/Salida/cropped_scope_5.png Graphic file (type png)
 <use ../EJ2/Mediciones/Salida/cropped_scope_5.png>
 Package pdftex.def Info: ../EJ2/Mediciones/Salida/cropped_scope_5.png  used on input line 170.
 (pdftex.def)             Requested size: 205.56436pt x 141.12474pt.
 ) [8 <../EJ2/Mediciones/Estados/cropped_scope_0.png (PNG copy)> <../EJ2/Mediciones/Estados/cropped_scope_1.png (PNG copy)> <../EJ2/Mediciones/Estados/cropped_scope_2.png (PNG copy)> <../EJ2/Mediciones/Salida/cropped_scope_3.png (PNG copy)> <../EJ2/Mediciones/Salida/cropped_scope_4.png (PNG copy)> <../EJ2/Mediciones/Salida/cropped_scope_5.png (PNG copy)>] [9] (ej3.tex
-<../EJ3/Recursos/TARGET.png, id=186, 409.53pt x 260.172pt>
+<../EJ3/Recursos/TARGET.png, id=181, 409.53pt x 260.172pt>
 File: ../EJ3/Recursos/TARGET.png Graphic file (type png)
 <use ../EJ3/Recursos/TARGET.png>
 Package pdftex.def Info: ../EJ3/Recursos/TARGET.png  used on input line 7.
@@ -744,30 +741,29 @@ Package pdftex.def Info: ../EJ3/Recursos/TARGET.png  used on input line 7.
 
 LaTeX Warning: Reference `fig:CIRCUIT' on page 11 undefined on input line 68.
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 70.
-<../EJ3/Recursos/mos_interface.png, id=200, 527.9725pt x 249.93375pt>
+<../EJ3/Recursos/CIRCUIT.png, id=194, 695.59875pt x 325.215pt>
+File: ../EJ3/Recursos/CIRCUIT.png Graphic file (type png)
+<use ../EJ3/Recursos/CIRCUIT.png>
+Package pdftex.def Info: ../EJ3/Recursos/CIRCUIT.png  used on input line 73.
+(pdftex.def)             Requested size: 695.59706pt x 325.2142pt.
+[11 <../EJ3/Recursos/CIRCUIT.png>]
+<../EJ3/Recursos/mos_interface.png, id=206, 527.9725pt x 249.93375pt>
 File: ../EJ3/Recursos/mos_interface.png Graphic file (type png)
 <use ../EJ3/Recursos/mos_interface.png>
-Package pdftex.def Info: ../EJ3/Recursos/mos_interface.png  used on input line 79.
+Package pdftex.def Info: ../EJ3/Recursos/mos_interface.png  used on input line 87.
 (pdftex.def)             Requested size: 527.9712pt x 249.93314pt.
-[11]
-
-LaTeX Warning: Reference `algo' on page 12 undefined on input line 87.
-
-<../EJ3/Recursos/FOTO1.png, id=211, 445.665pt x 270.41025pt>
+<../EJ3/Recursos/FOTO1.png, id=208, 445.665pt x 270.41025pt>
 File: ../EJ3/Recursos/FOTO1.png Graphic file (type png)
 <use ../EJ3/Recursos/FOTO1.png>
-Package pdftex.def Info: ../EJ3/Recursos/FOTO1.png  used on input line 93.
+Package pdftex.def Info: ../EJ3/Recursos/FOTO1.png  used on input line 101.
 (pdftex.def)             Requested size: 445.66391pt x 270.40958pt.
-
-LaTeX Warning: Reference `otro algo mas lindo' on page 12 undefined on input line 98.
-
-<../EJ3/Recursos/FOTO2.png, id=212, 445.665pt x 269.808pt>
+ [12 <../EJ3/Recursos/mos_interface.png>]
+<../EJ3/Recursos/FOTO2.png, id=217, 445.665pt x 269.808pt>
 File: ../EJ3/Recursos/FOTO2.png Graphic file (type png)
 <use ../EJ3/Recursos/FOTO2.png>
-Package pdftex.def Info: ../EJ3/Recursos/FOTO2.png  used on input line 103.
+Package pdftex.def Info: ../EJ3/Recursos/FOTO2.png  used on input line 111.
 (pdftex.def)             Requested size: 445.66391pt x 269.80734pt.
-[12 <../EJ3/Recursos/mos_interface.png> <../EJ3/Recursos/FOTO1.png>]) [13 <../EJ3/Recursos/FOTO2.png>]
+) [13 <../EJ3/Recursos/FOTO1.png> <../EJ3/Recursos/FOTO2.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
  ("c:/Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.aux"
@@ -777,7 +773,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 0FA362EC81EEAB0FE07C29107560E015;919.
+(rerunfilecheck)             Checksum: 987E1FDAC8EEAB29F75C9C4543B55861;857.
 
 
 LaTeX Warning: There were undefined references.
@@ -787,17 +783,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20484 strings out of 492945
- 390613 string characters out of 3125808
- 492552 words of memory out of 3000000
- 23928 multiletter control sequences out of 15000+200000
+ 20475 strings out of 492945
+ 390426 string characters out of 3125808
+ 492699 words of memory out of 3000000
+ 23919 multiletter control sequences out of 15000+200000
  11647 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,17n,81p,874b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Carlos/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "c:/Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.pdf" (13 pages, 977082 bytes).
+Output written on "c:/Users\Carlos\Desktop\ITBA\3er año\1er cuatri\E3\TP3\tp3-grupo-1\Informe\informe.pdf" (13 pages, 989439 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

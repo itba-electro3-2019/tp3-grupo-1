@@ -8,7 +8,6 @@
 \contentsline {subsection}{Conclusiones}{9}{section*.19}% 
 \contentsline {section}{Ejercicio 3: M\'aquina de Moore}{10}{section*.20}% 
 \contentsline {subsection}{Dise\~no de M\'aquina de Estados}{10}{section*.22}% 
-\contentsline {subsection}{Level Shifters}{11}{section*.27}% 
+\contentsline {subsection}{Level Shifters}{12}{section*.27}% 
 \contentsline {subsection}{Regulador de tensi\'on}{12}{section*.29}% 
 \contentsline {subsection}{Mediciones y resultados}{12}{section*.30}% 
-\contentsline {subsection}{Conclusiones}{13}{section*.33}% 

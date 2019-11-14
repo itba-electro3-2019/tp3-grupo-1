@@ -66,8 +66,16 @@ De este mapa se obtiene la soluci\'on que se muestra en \ref{eq:Y2}
 \end{equation}
 Adem\'as, es posible observar en la tabla de estados que $Z = y_1$. Si bien esto fija el valor de salida en el caso de que el estado actual fuera $y_2-y_1 = 1-1$, como en principio este estado no es v\'alido nunca deber\'ia suceder. Mas all\'a de esto, se define la salida como \textit{don't care} en ese caso, as\'i que tampoco presenta un problema.
 Se presenta entonces, en la Figura \ref{fig:CIRCUIT}, el circuito l\'ogico obtenido a partir de resoluci\'on anterior.
+\begin{figure}[H]
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+    \includegraphics{../EJ3/Recursos/CIRCUIT}
+    }
+    \caption{Circuito implementado}
+    \label{fig:LEVEL_SHIFTER}
+\end{figure}
+Se puede observar que se agrega una entrada adicional de reset, para poder resetear los flipflops al iniciar, comenzando en un estado v\'alido
 
-\todo[inline]{FALTAAAA!}
 \subsection{Level Shifters}
 Si bien entradas y salidas del circuito son de 5V-0V, se dise\~na la l\'ogica interna de la m\'aquina de estados para que funcione a 3.3V. Se utilizan con este fin \textit{level shifters} en  las entradas y salidas del sistema.
 Luego de contrastar el funcionamiento de las opciones disponibles que cumplen con lo requerido, se concluye que la de mejor funcionamiento en cuanto a sus caracter\'isticas, como tiempo de propagaci\'on y tiempo de rise, es presentada en la Figura \ref{fig:LEVEL_SHIFTER}.
@@ -84,7 +92,7 @@ Luego de contrastar el funcionamiento de las opciones disponibles que cumplen co
 Para obtener una tensi\'on constante en 3.3V, que se utilizan tanto  para la alimentaci\'on de los circuitos integrados, como para los \textit{level shifters}, se implementa un regulador de tensi\'on simple con un diodo zener y una resistencia.
 A pesar de que el regulador funciona correctamente, se observa como un fallo en su dise\~no que la corriente que consume es muy elevada. Se asume este defecto a la baja resistencia utilizada en el regulador. 
 \subsection{Mediciones y resultados}
-Se puede ver en la Figura \ref{algo} se puede ver como responde la m\'aquina de estados ante una entrada que se mantiene en alto por menos de un ciclo de clock, es decir, del estado 0-0 al estado 0-1 y de nuevo al estado 0-0.
+Se puede ver en la Figura \ref{fig:GRAPH1} se puede ver como responde la m\'aquina de estados ante una entrada que se mantiene en alto por menos de un ciclo de clock, es decir, del estado 0-0 al estado 0-1 y de nuevo al estado 0-0.
 
 \begin{figure}[H]
     \centering
@@ -92,20 +100,18 @@ Se puede ver en la Figura \ref{algo} se puede ver como responde la m\'aquina de 
     \includegraphics{../EJ3/Recursos/FOTO1}
     }
     \caption{del estado 0-0 al estado 0-1 y de nuevo al estado 0-0..Entrada en azul, clock en rojo y salida en verde}
-    \label{fig:LEVEL_SHIFTER}
+    \label{fig:GRAPH1}
 \end{figure}
 
-En la Figura \ref{otro algo mas lindo} se observa la respuesta de la m\'aquina de estados a una entrada que se mantiene en alto por m\'as tiempo del que dura un per\'iodo del clock, es decir la transici\'on 0-0, 0-1, 1-0.
+En la Figura \ref{fig:GRAPH2} se observa la respuesta de la m\'aquina de estados a una entrada que se mantiene en alto por m\'as tiempo del que dura un per\'iodo del clock, es decir la transici\'on 0-0, 0-1, 1-0.
 \begin{figure}[H]
     \centering
     \resizebox{0.8\textwidth}{!}{
     \includegraphics{../EJ3/Recursos/FOTO2}
     }
     \caption{Transici\'on 0-0, 0-1, 1-0. Entrada en azul, clock en rojo y salida en verde}
-    \label{fig:LEVEL_SHIFTER}
+    \label{fig:GRAPH2}
 \end{figure}
 
 Se puede observar que en todos los casos el sistema responde en concordancia con lo esperado.
 
-\subsection{Conclusiones}
-Fue posible implementar la FSM con las caracter\'isticas deseadas. Sin embargo es posible segui realizando mejoras al dise\~no del circuito para mejorar sus par\'ametros, coo por ejemplo el consumo de corriente.
